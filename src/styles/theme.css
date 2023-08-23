@@ -18,8 +18,8 @@
   --color-border: theme("colors.gray.50" / 10%);
 }
 
-.bg-image {
-  background-image: url('/backgroundv1.png'); /* adjust the path if needed */
+/* .bg-image {
+  background-image: url('/backgroundv1.png');
   background-repeat: no-repeat;
-  background-size: cover; /* this makes sure the image covers the whole element */
-}
+  background-size: cover; 
+} */
