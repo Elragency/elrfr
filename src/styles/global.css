@@ -11,18 +11,18 @@ a,
   @apply bg-gradient-to-br from-white via-green-500 to-white;
 }
 
-.bg-image {
-  /* background-image: url('../src/assets/backgroundv1.png'); */
+/* .bg-image {
+  background-image: url('../src/assets/backgroundv1.png');
   background-repeat: no-repeat;
-  background-size: cover; /* this makes sure the image covers the whole element */
-}
+  background-size: cover;
+} */
 
 .blur-bg {
   position: relative;
   overflow: hidden;
 }
 
-.blur-bg::before {
+/* .blur-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -32,9 +32,9 @@ a,
   background-image: url('src/assets/backgroundv3.png');
   background-size: cover;
   background-repeat: no-repeat;
-  filter: blur(5px); /* Adjust the value as needed */
+  filter: blur(5px);
   z-index: -1;
-}
+} */
 
 .btn2 {
   min-height: 50px;
