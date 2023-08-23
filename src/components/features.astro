@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Un service rapide et accessible",
+    description:
+      "Nous pouvons mettre votre entreprise en ligne en quelques jours en nous assurant d’avoir un site web personnalisé pour votre entreprise.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Optimisé pour le web (SEO)",
+    description:
+      "Avoir un site internet est uniquement utile s’il s’affiche lorsque quelqu’un vous cherche. En optimisant votre SEO, cela n’est pas une possibilité, mais une certitude.",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Devenez une référence",
+    description:
+      "En utilisant l’intelligence artificielle, nous sommes en mesure de vous placer en tant qu’experts dans votre domaine aux yeux de vos clients potentiels.",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Intégrations additionnelles",
+    description:
+      "Vous avez besoin d'une plateforme pour permettre à vos clients de prendre rendez-vous ? Vous avez besoin d'outils spécifiques ? Nous pouvons nous en charger.",
+    icon: "mdi:graph",
+  },
+  {
+    title: "Des Services Complémentaires",
+    description:
+      "Un site web n'est que le début, en choisissant nos services, nous vous offrons des outils complémentaires tels qu’un courriel d’entreprise ou des automatisations efficaces.",
+    icon: "mdi:directions-fork",
+  },
+
+  {
+    title: "Marketing 360 Complet",
+    description:
+      "En faisant affaire avec nous, vous allez pouvoir comprendre qui sont vos clients et où ils sont afin d’avoir la possibilité de faire des campagnes publicitaires ciblées complètes et sans vous devoir vous briser la tête.",
+    icon: "mdi:account-group",
+  },
+];
+---
+<section style="padding-top: 50px;">
+  <ContentSection title="Ce Que Nous Offrons" id="features" class="float-in-on-scroll">
+    <Fragment slot="lead">
+      Notre but est de créer un partenariat <span class="text-primary">adapté à vos besoins</span> sans vous obliger à payer des sommes exorbitantes. 
+    </Fragment>
+    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      {
+        features.map(({ title, description, icon }) => (
+          <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+            <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+              <Icon name={icon} />
+            </div>
+            <p class="text-center font-extrabold text-xl">{title}</p>
+            <p class="text-center text-offset text-sm">{description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </ContentSection>
+</section>
+

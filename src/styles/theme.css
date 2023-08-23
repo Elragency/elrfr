@@ -1,0 +1,25 @@
+[data-theme="light"] {
+  --color-primary: theme("colors.green.600");
+  --color-secondary: theme("colors.green.600");
+  --color-text: theme("colors.gray.50");
+  --color-text-offset: theme("colors.gray.400");
+  --color-background: theme("colors.black");
+  --color-background-offset: theme("colors.gray.800");
+  --color-border: theme("colors.gray.50" / 10%);
+}
+
+[data-theme="dark"] {
+  --color-primary: theme("colors.green.600");
+  --color-secondary: theme("colors.green.600");
+  --color-text: theme("colors.gray.50");
+  --color-text-offset: theme("colors.gray.400");
+  --color-background: theme("colors.black");
+  --color-background-offset: theme("colors.gray.800");
+  --color-border: theme("colors.gray.50" / 10%);
+}
+
+.bg-image {
+  background-image: url('/backgroundv1.png'); /* adjust the path if needed */
+  background-repeat: no-repeat;
+  background-size: cover; /* this makes sure the image covers the whole element */
+}

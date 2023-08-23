@@ -1,0 +1,88 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "Google Ads",
+    icon: "frameworks/adwords",
+    url: "https://reactjs.org/",
+  },
+  {
+    title: "GA4",
+    icon: "frameworks/ga4",
+    url: "https://preactjs.com/",
+  },
+  {
+    title: "GTM",
+    icon: "frameworks/gtm",
+    url: "https://svelte.dev/",
+  },
+  {
+    title: "Growth Driven",
+    icon: "frameworks/vue",
+    url: "https://app.hubspot.com/academy/achievements/lpzbzd9l/en/1/edouard-le-rouzes/growth-driven-design",
+  },
+  {
+    title: "SEO",
+    icon: "frameworks/seo",
+    url: "https://app.hubspot.com/academy/achievements/4ps4rtf7/en/1/edouard-le-rouzes/seo",
+  },
+  {
+    title: "Digital MKT",
+    icon: "frameworks/digitalmkt",
+    url: "https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce",
+  },
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "Griffith",
+    icon: "platforms/griffith",
+    url: "https://www.griffith.edu.au/",
+  },
+  {
+    title: "Johns Hopkins",
+    icon: "platforms/hopkins",
+    url: "https://coursera.org/share/d5873ad573cf1b99f551a4b0acba597f",
+  },
+  {
+    title: "Coursera",
+    icon: "platforms/coursera",
+    url: "https://coursera.org/share/1469133f161e78eedd2ca5ef13a698ae",
+  },
+  {
+    title: "Champlain College",
+    icon: "platforms/champlain",
+    url: "https://champlainsaintlambert.ca/",
+  },
+  {
+    title: "Hubspot",
+    icon: "platforms/hubspot",
+    url: "https://app.hubspot.com/academy",
+  },
+  {
+    title: "Duke",
+    icon: "platforms/duke",
+    url: "https://www.netlify.com/",
+  },
+];
+---
+<br>
+<ContentSection title="Nous Sommes Certifiés" id="compatibility">
+  <Fragment slot="lead">
+    <span class="text-primary">Agence ELR</span> s'assure d'être continuellement à jour pour vous offrir 
+    <span class="text-primary">les meilleurs résultats</span>  dans l'industrie.
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Certifications"
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    items={platforms}
+    title="Diplomas"
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>

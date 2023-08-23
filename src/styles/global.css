@@ -1,0 +1,259 @@
+/* TODO: consider creating <Button> and <GradientText> components */
+a,
+.btn {
+  @apply transition-colors duration-200;
+  @apply hover:text-secondary;
+  @apply focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-transparent;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  @apply bg-gradient-to-br from-white via-green-500 to-white;
+}
+
+.bg-image {
+  /* background-image: url('../src/assets/backgroundv1.png'); */
+  background-repeat: no-repeat;
+  background-size: cover; /* this makes sure the image covers the whole element */
+}
+
+.blur-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.blur-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('src/assets/backgroundv3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(5px); /* Adjust the value as needed */
+  z-index: -1;
+}
+
+.btn2 {
+  min-height: 50px;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-family: Bebas Neue;
+  font: bold;
+  gap: 10px;
+  padding: 10px 60px;
+  border-radius: var(--radius-6);
+  transition: var(--transition-1);
+}
+.btn2:hover {
+  background: #ff96ad;
+  box-shadow: 0 0 5px #ffffff, 0 0 25px #e7e7e7, 0 0 50px #fbfbfb, 0 0 200px #ffffff;
+  color: black;
+}
+
+
+/* NEW TEXT FORMAT */
+
+
+.urmom {
+color: #FFF;
+text-align: center;
+text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
+font-family: Bebas Neue;
+font-size: 160px;
+font-style: normal;
+font-weight: 700;
+line-height: 78%; /* 124.8px */
+letter-spacing: -2.4px;
+text-transform: capitalize;
+}
+
+.urmom1 {
+color: #FFF;
+text-align: center;
+font-family: Nunito;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+/* FLOAT IN ANIMATIONS */
+@keyframes floatInAnimation {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.float-in-on-scroll {
+  opacity: 0; /* initially hide the element */
+  animation-name: floatInAnimation;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+
+/* MY MODIFICATIONS */
+.text-left {
+  text-align: left !important;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.enter-from-left {
+  animation: slideInFromLeft 2s forwards;
+}
+
+.exit-to-left {
+  animation: slideOutToLeft 2s forwards;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper-container {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1ed445, #491f8f);
+}
+
+.card img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 400px;
+  transition: 0.5s;
+}
+
+.card:hover img {
+  left: 80%;
+  height: 500px;
+}
+.card:hover content {
+  left: 100%;
+  height: 500px;
+}
+
+.card .content {
+  position: relative;
+  width: 50%;
+  left: 10%;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.card:hover .content {
+  left: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.card .content h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+
+.card .content p {
+  color: #fff;
+}
+
+.card .content a {
+  position: relative;
+  display: inline-block;
+  color: #111;
+  padding: 5px 5px;
+  border-radius: 10px;
+  background: #fff;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+/* mobile css  */
+@media (max-width: 991px){
+  .card {
+    position: relative;
+    width: auto;
+    max-width: 600px;
+    transition: 0.5s;
+    align-items: flex-start;
+  }
+
+  .card:hover {
+    height: 600px;
+  }
+
+  .card:hover img{
+    left: 55%;
+    height: 350px;
+  }
+
+  .card .content {
+    width: 100%;
+    left: 0;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 420px){
+  .card .content {
+    padding: 30px;
+  }
+  .card:hover img{
+    height: 300px;
+  }
+}
+
+@media (min-width: 991px){
+.card:hover .content {
+  left: -140px;
+  opacity: 1;
+  visibility: visible;
+}
+}

@@ -1,0 +1,33 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/ct-section3.astro";
+import astronautImage from "~/assets/mountain.png";
+import Bgimage2 from "~/components/bg-image.astro";
+import mssMarvel from "~/components/msMarvel.astro";
+import mssMarvelImage from "~/assets/computer.png"; // Ensure this path is correct.
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+---
+<ContentSection title="Nous pouvons vous permettre d'accomplir cela" id="intro" data-aos="fade-up">
+    <div class="wrapper-container">
+        <!-- Card 1 -->
+        <div class="card relative"> <!-- Set position relative here -->
+            <div class="content">
+                <h2 style="white-space: nowrap;">Creation</h2>
+                <h2 style="white-space: nowrap;">Web</h2>
+                <p>Un site web personnalise pour votre entreprise</p>
+            </div>
+            
+            <Picture
+                class="h-full w-full object-cover"
+                src={mssMarvelImage}
+                widths={widths}
+                sizes={sizes}
+                loading="eager"
+                alt="A floating astronaut in a space suit"
+            />
+        </div>
+    </div>
+</ContentSection>
