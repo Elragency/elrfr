@@ -8,54 +8,56 @@ import type { FeatureItem } from "~/types";
 <ContentSection title="Apprenons À Nous Connaitre" id="contact">
   <Fragment slot="lead">
     <form name="contact" method="POST" data-netlify="true">
-        <div class="background">
-            <div class="container2">
-                <div class="screen">
-                    <div class="screen-header">
-                        <div class="screen-header-left">
-                            <div class="screen-header-button close"></div>
-                            <div class="screen-header-button maximize"></div>
-                            <div class="screen-header-button minimize"></div>
-                        </div>
-                        <div class="screen-header-right">
-                            <div class="screen-header-ellipsis"></div>
-                            <div class="screen-header-ellipsis"></div>
-                            <div class="screen-header-ellipsis"></div>
-                        </div>
-                    </div>
-                    <div class="screen-body">
-                        <div class="screen-body-item left">
-                            <div class="app-title">
-                                <span>ENTRONS EN CONTACT</span>
-                            </div>
-                            <div class="app-contact">INFO : elragency@gmail.com</div>
-                        </div>
-                        <div class="screen-body-item">
-                            <div class="app-form">
-                                <div class="app-form-group">
-                                    <input class="app-form-control" placeholder="NOM COMPLET" value="">
-                                </div>
-                                <div class="app-form-group">
-                                    <input class="app-form-control" placeholder="COURRIEL">
-                                </div>
-                                <div class="app-form-group">
-                                    <input class="app-form-control" placeholder="TÉLÉPHONE">
-                                </div>
-                                <div class="app-form-group message">
-                                    <textarea class="app-form-control" placeholder="MESSAGE" rows="4"></textarea>
-                                </div>
-                                <div class="app-form-group buttons">
-                                    <button class="app-form-button">Annuler</button>
-                                    <button class="app-form-button">Envoyer</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-    
+      <!-- Hidden input for Netlify -->
+      <input type="hidden" name="form-name" value="contact" />
+  
+      <div class="background">
+          <div class="container2">
+              <div class="screen">
+                  <div class="screen-header">
+                      <div class="screen-header-left">
+                          <div class="screen-header-button close"></div>
+                          <div class="screen-header-button maximize"></div>
+                          <div class="screen-header-button minimize"></div>
+                      </div>
+                      <div class="screen-header-right">
+                          <div class="screen-header-ellipsis"></div>
+                          <div class="screen-header-ellipsis"></div>
+                          <div class="screen-header-ellipsis"></div>
+                      </div>
+                  </div>
+                  <div class="screen-body">
+                      <div class="screen-body-item left">
+                          <div class="app-title">
+                              <span>ENTRONS EN CONTACT</span>
+                          </div>
+                          <div class="app-contact">INFO : elragency@gmail.com</div>
+                      </div>
+                      <div class="screen-body-item">
+                          <div class="app-form">
+                              <div class="app-form-group">
+                                  <input class="app-form-control" placeholder="NOM COMPLET" name="full_name" value="">
+                              </div>
+                              <div class="app-form-group">
+                                  <input class="app-form-control" placeholder="COURRIEL" name="email">
+                              </div>
+                              <div class="app-form-group">
+                                  <input class="app-form-control" placeholder="TÉLÉPHONE" name="telephone">
+                              </div>
+                              <div class="app-form-group message">
+                                  <textarea class="app-form-control" placeholder="MESSAGE" name="message" rows="4"></textarea>
+                              </div>
+                              <div class="app-form-group buttons">
+                                  <button class="app-form-button" type="reset">Annuler</button>
+                                  <input type="submit" class="app-form-button" value="Envoyer">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>
     
 
       </div>
