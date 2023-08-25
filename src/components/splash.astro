@@ -14,7 +14,8 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
 
 ---
 
-<section class="relative h-screen"> <!-- Ensure the section takes up the full viewport height -->
+<section class="relative h-screen">
+  <Starfield />
   <div class="absolute inset-0 overflow-hidden">
       <!-- <Bgimage /> -->
   </div>
@@ -22,7 +23,7 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
       <canvas id="starfield-canvas" class="h-full w-full"></canvas> <!-- Make sure the canvas takes up the full size of its container -->
   </div>
 
-  <Starfield />
+
   <!-- <GitHubCorner /> -->
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
       <!-- <HeroImage /> -->
