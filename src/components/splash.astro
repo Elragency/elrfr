@@ -1,49 +1,66 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
-import astronautImage from "~/assets/astronaut.png";
+import astronautImageBig from "~/assets/mac-big.png";
+import astronautImageSmall from "~/assets/mac-small.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 import GitHubCorner from "./github-corner.astro";
 import Backgroundimage from "~/assets/backgroundv3.png";
 import Bgimage from "~/components/bg-image.astro";
 
-const widths = [450, 800];
-const sizes = "(min-width: 640px) 42vw, 67vw";
+const widths = [450, 800]; // This represents the actual widths of the images
+const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width image when viewport is >= 640px and 450px width image otherwise.
+
 ---
 
-<section class="relative h-full">
+<section class="relative h-screen"> <!-- Ensure the section takes up the full viewport height -->
   <div class="absolute inset-0 overflow-hidden">
-    <Bgimage />
+      <!-- <Bgimage /> -->
   </div>
   <div id="starfield" class="absolute inset-0">
-    <canvas id="starfield-canvas"></canvas>
+      <canvas id="starfield-canvas" class="h-full w-full"></canvas> <!-- Make sure the canvas takes up the full size of its container -->
   </div>
-  
 
   <Starfield />
   <!-- <GitHubCorner /> -->
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <!-- <HeroImage /> -->
+      <!-- <HeroImage /> -->
   </div>
-  <div class="relative grid place-items-center sm:grid-cols-1">
-    <div id="astronaut" > <br> <br>
-    <h2 class="flex flex-col gap-1 items-center justify-center">
-        <Icon name="logomark" class="h-24 text-white md:h-32" />
-        <div class="gradient-text text-center font-extrabold tracking-tighter text-8xl urmom mt-4 mb-5">
-            ELR
-            <br> Agency
-        </div>
-    </h2>
-    <br>
-    </div>
-    <div class="mt-2 mb-4 urmom1">
-        Nous changeons le futur des PME en les aidants à prendre un virage électronique.
-    </div>
-    <a href="#contact" class="mt-2 inline-block text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-xs px-2 py-1 text-center dark:text-white  dark:focus:ring-purple-900 btn2">SE METTRE EN LIGNE</a>
-</div>
 
-    </div>
+  <!-- Container for Agency text, Picture, and Button -->
+  <div class="relative grid h-full place-items-center sm:grid-cols-1"> <!-- Ensure this container takes up the full height of its parent -->
+
+      <!-- Background Text: Agency -->
+      <div class="background-text gradient-text text-center font-extrabold tracking-tighter urmom absolute inset-0 flex items-center justify-center w-screen h-screen text-20vw z-0 big-hidden">
+          Agency
+      </div>
+
+      <!-- Picture and Button -->
+      <div class="flex flex-col items-center justify-center z-10 space-y-4"> <!-- Added space-y-4 for consistent spacing between elements -->
+          <!-- <Icon name="logomark" class="h-24 text-white md:h-32" /> -->
+          <div class="background-text-container relative w-full" id="astronaut">
+            <div class="responsiveAstronaut small-screen-padding">
+            <Picture
+                class="h-full w-full object-cover urmom ontop-image relative z-10"
+                src={astronautImageBig}
+                srcset={`${astronautImageBig} 800w`}
+                widths={widths}
+                sizes={sizes}
+                loading="eager"
+                alt="A floating astronaut in a space suit"
+            />
+            
+        </div>
+        <div class="flex justify-center"> <!-- Flex container to center the button horizontally -->
+          <a href="#contact" 
+             class="inline-block text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-4 py-1 text-center dark:text-white dark:focus:ring-purple-900 btn2">
+             SE METTRE EN LIGNE
+          </a>
+      </div>
+      <br>
+      </div>
+      
   </div>
 </section>
 
@@ -83,4 +100,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       @apply block;
     }
   }
+  .ontop-image {
+  z-index: 2;
+}
 </style>

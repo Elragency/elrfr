@@ -257,3 +257,93 @@ line-height: normal;
   visibility: visible;
 }
 }
+
+
+/* AGENCY TEXT MAIN  */
+.big-hidden {
+
+}
+
+.background-text-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Assuming you want the text to take up the full viewport height, adjust as needed */
+}
+
+.background-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 35vw; */
+  font-weight: bold;
+  z-index: 1;
+  /* animation: fadeInOut 5s infinite; */
+  animation: spacingIn 1s forwards;
+}
+.background-text {
+  font-size: 35vw;
+  animation: spacingIn 1s forwards;
+}
+
+/* @keyframes fadeInOut {
+  0%   { opacity: 0.5; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.5; }
+} */
+
+.ontop-image {
+  z-index: 2;
+}
+
+@keyframes spacingIn {
+  0% {
+      letter-spacing: 5vw;
+  }
+  100% {
+      letter-spacing: normal;
+  }
+}
+
+.responsiveAstronaut {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 450px) {
+  .responsiveAstronaut {
+      background-image: url('[../assets/mac-big.png]');
+  }
+}
+
+@media (min-width: 451px) {
+  .responsiveAstronaut {
+      background-image: url('[../assets/mac-big.png]');
+  }
+}
+
+/* No padding for larger screens by default */
+.responsiveAstronaut {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+/* Add padding for screens up to 640px wide */
+@media (max-width: 640px) {
+  .responsiveAstronaut.small-screen-padding {
+      padding-top: 100px;
+  }
+}
+
+
+
+
+
+
+
+
