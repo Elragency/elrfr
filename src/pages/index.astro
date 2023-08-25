@@ -28,6 +28,7 @@ const description =
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
+    3
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
@@ -56,7 +57,7 @@ const description =
         document.documentElement.dataset.theme = themeSaved;
       } else {
         const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
+          "(prefers-color-scheme: dark)",
         ).matches;
         document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
       }
