@@ -3,7 +3,7 @@ import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
 import astronautImage from "~/assets/astronaut.png";
 import HeroImage from "~/components/hero-image.astro";
-import Starfield from "~/components/starfield1.astro";
+import Starfield1 from "~/components/Starfield1.astro";
 import GitHubCorner from "./github-corner.astro";
 
 const widths = [450, 800];
@@ -11,7 +11,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
 <section class="relative h-full bg-black">
-  <Starfield />
+  <Starfield1 />
   <GitHubCorner />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
