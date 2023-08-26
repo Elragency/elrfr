@@ -8,16 +8,18 @@ import Bgimage2 from "~/components/bg-image.astro";
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
-<section class="relative h-full float-in-on-scroll">
+<section class="relative h-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+
   <div class="p-4 sm:p-8 absolute grid h-full">
-    <ContentSection title="Etes vous pret a faire connaitre votre entreprise?" id="intro" class="exit-to-left" data-aos="fade-up">
+    <ContentSection title="Nous ne vendons pas de services, nous devenons partenaire." id="intro" class="exit-to-left" data-aos="fade-up">
     
     <Fragment class="float-in-on-scroll">
       Vous êtes un spécialiste dans votre domaine ? 
-      Nous le sommes également dans le domaine de la mise en ligne d'entreprise ! <span class="text-primary">Faisons affaire </span> 
+      Nous pouvons vous aider à prendre un virage électronique de façon simple et efficace ! 
+      
     </Fragment>
     
-    <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    <!-- <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
       <a href="#showcase" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4">
         <Icon pack="mdi" name="telescope" class="h-8" />
         <span class="text-sm">Consulter Nos Projets</span>
@@ -26,7 +28,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
         <Icon pack="mdi" name="rocket" class="h-8" />
         <span class="text-sm">Travaillons Ensemble !</span>
       </a>
-    </div>
+    </div> -->
 
   </ContentSection>
 </div>

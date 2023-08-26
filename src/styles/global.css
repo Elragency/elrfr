@@ -336,9 +336,19 @@ line-height: normal;
 /* Add padding for screens up to 640px wide */
 @media (max-width: 640px) {
   .responsiveAstronaut.small-screen-padding {
-      padding-top: 100px;
+      padding-top: -10px;
+  }
+  .smally {
+    visibility: hidden;
   }
 }
+
+@media (max-width: 640px) {
+  .btn-small {
+    visibility: hidden;
+  }
+}
+
 
 
 
