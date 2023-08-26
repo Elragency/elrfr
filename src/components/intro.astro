@@ -8,28 +8,49 @@ import Bgimage2 from "~/components/bg-image.astro";
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
-<section class="relative h-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+<section class="relative h-full">
 
-  <div class="p-4 sm:p-8 absolute grid h-full">
-    <ContentSection title="Nous ne vendons pas de services, nous devenons partenaire." id="intro" class="exit-to-left" data-aos="fade-up">
+  <div class="p-4 sm:p-8 absolute grid h-full fade-up">
+    <ContentSection 
+        title="Nous ne vendons pas de services, nous devenons partenaire." 
+        id="intro" 
+        data-aos="fade-up" 
+        data-aos-duration="1000" 
+        data-aos-delay="50"
+        >
     
-    <Fragment class="float-in-on-scroll">
-      Vous êtes un spécialiste dans votre domaine ? 
-      Nous pouvons vous aider à prendre un virage électronique de façon simple et efficace ! 
-      
-    </Fragment>
-    
-    <!-- <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-      <a href="#showcase" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4">
-        <Icon pack="mdi" name="telescope" class="h-8" />
-        <span class="text-sm">Consulter Nos Projets</span>
-      </a>
-      <a href="#contact" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4">
-        <Icon pack="mdi" name="rocket" class="h-8" />
-        <span class="text-sm">Travaillons Ensemble !</span>
-      </a>
-    </div> -->
+        <Fragment class="float-in-on-scroll">
+          Vous êtes un spécialiste dans votre domaine ? 
+          Nous pouvons vous aider à prendre un virage électronique de façon simple et efficace ! 
+        </Fragment>
+        
+<!--         
+        <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+          <a href="#showcase" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4">
+            <Icon pack="mdi" name="telescope" class="h-8" />
+            <span class="text-sm">Consulter Nos Projets</span>
+          </a>
+          <a href="#contact" class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4">
+            <Icon pack="mdi" name="rocket" class="h-8" />
+            <span class="text-sm">Travaillons Ensemble !</span>
+          </a>
+        </div> 
+        -->
 
-  </ContentSection>
-</div>
+        <script>
+          document.addEventListener('scroll', function() {
+  let title = document.querySelector('.fade-up');
+  let rect = title.getBoundingClientRect();
+
+  // Check if the title is in the viewport
+  if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+    title.classList.add('active');
+  } else {
+    title.classList.remove('active');
+  }
+});
+        </script>
+
+    </ContentSection>
+  </div>
 </section>

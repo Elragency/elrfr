@@ -350,6 +350,19 @@ line-height: normal;
 }
 
 
+/* AUTOMATION INTRO SECTION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+/* active state, fully visible and in its normal position */
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 

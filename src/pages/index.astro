@@ -23,6 +23,9 @@ const description =
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
 
     <title>Astro Landing Page</title>
     <meta name="description" content={description} />
@@ -67,15 +70,11 @@ const description =
   <section class="relative h-full">
     <div class="space-y-24 px-8 py-32">
       <Intro />
-
     </div>
     </section>
-    <!-- <Cards /> -->
-
       <section>
     <Features />
       </section>
-    <br>
     <Compatibility />
     <Showcase />
     </div>
@@ -83,5 +82,6 @@ const description =
     <script>
       AOS.init();
     </script>
+    
   </body>
 </html>
