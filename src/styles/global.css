@@ -15,14 +15,14 @@ a,
   background-image: url('../src/assets/backgroundv1.png');
   background-repeat: no-repeat;
   background-size: cover;
-} */
+}
 
 .blur-bg {
   position: relative;
   overflow: hidden;
-}
+} */
 
-/* .blur-bg::before {
+.blur-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -34,7 +34,7 @@ a,
   background-repeat: no-repeat;
   filter: blur(5px);
   z-index: -1;
-} */
+}
 
 .btn2 {
   min-height: 50px;
@@ -623,13 +623,6 @@ margin-top: 0% !important;
   }
 
 
-  /* Initial hidden state */
-.hidden {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s, transform 0.6s;
-  visibility: hidden;
-}
 
 /* Fade up animation */
 .fade-in-up {
