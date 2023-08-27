@@ -621,3 +621,19 @@ margin-top: 0% !important;
    .footer-top .container { grid-template-columns: 1fr 0.6fr 0.9fr 1fr; }
 
   }
+
+
+  /* Initial hidden state */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s, transform 0.6s;
+  visibility: hidden;
+}
+
+/* Fade up animation */
+.fade-in-up {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  visibility: visible !important;
+}
