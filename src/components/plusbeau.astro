@@ -1,0 +1,32 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import astronautImage from "~/assets/mountain.png";
+import Bgimage2 from "~/components/bg-image.astro";
+import gifSrc from "~/assets/icon-church.gif";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+---
+<br>
+<ContentSection title="LE PLUS BEAU ?" style="space-y-0">
+  <div class="sub-title">
+    Vous ne payer rien avant d’avoir obtenu des résultats.
+  </div>
+  <p class="max-w-xl text-center font-extrabold text-2xl">
+    <slot name="lead" />
+    Nous cherchons des partenaires avec qui collaborer, et nous ne croyons pas que vous avez a payer sans voir de résultats !
+  </p>
+  <img src="/src/assets/pig.gif" alt="Description of GIF" />
+  <div class="flex justify-center"> <!-- Flex container to center the button horizontally -->
+    <a href="#contact" 
+        class="inline-block btn-small text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-4 py-1 text-center dark:text-white dark:focus:ring-purple-900 btn2">
+        SE METTRE EN LIGNE
+    </a>
+</div>
+<br>
+</ContentSection>
+
+
+

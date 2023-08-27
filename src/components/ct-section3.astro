@@ -7,7 +7,7 @@ export interface Props {
 const { title, id } = Astro.props;
 ---
 
-<section id={id} class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8" style="margin: 40px;">
+<section id={id} class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 " style="margin: 40px;">
     <!-- Title and eyebrow -->
     <div class="flex flex-col gap-4">
         <slot name="eyebrow" />

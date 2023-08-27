@@ -1,12 +1,14 @@
 ---
 import "@fontsource-variable/inter";
-import Compatibility from "~/components/compatibility.astro";
+import Propos from "~/components/propos.astro";
 import Features from "~/components/features.astro";
-import Footer from "~/components/footer.astro";
+import Footer2 from "~/components/footer2.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
-import Showcase from "~/components/showcase.astro";
+import Beau from "~/components/plusbeau.astro";
+import Portfolio from "~/components/portfolio.astro";
 import Splash from "~/components/splash.astro";
+import Contact from "~/components/contact.astro";
 import Cards from "~/components/cards.astro";
 import "~/styles/index.css";
 
@@ -23,8 +25,9 @@ const description =
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
-    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
 
 
     <title>Astro Landing Page</title>
@@ -72,16 +75,16 @@ const description =
       <Intro />
     </div>
     </section>
-      <section>
     <Features />
-      </section>
-    <Compatibility />
-    <Showcase />
+    <Beau />
+    <Propos />
+    <Cards />
+    <Portfolio />
     </div>
-    <Footer />
+    <Contact />
+    <Footer2 />
     <script>
       AOS.init();
     </script>
-    
   </body>
 </html>

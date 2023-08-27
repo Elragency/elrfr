@@ -44,45 +44,77 @@ const features: Array<FeatureItem> = [
 ];
 ---
 <section style="padding-top: 50px;">
-  <ContentSection title="Comment Nous Fonctionnons" id="features" class="float-in-on-scroll">
-    <Fragment slot="lead">
-      Notre but est de vous fournir tous les outils nécessaires pour vous permettre <span class="text-primary">de passé au niveau supérieur</span> sans complications. 
-    </Fragment>
+  <ContentSection title="Comment Nous Fonctionnons" id="fonctions" class="float-in-on-scroll">
+      <Fragment slot="lead">
+          Notre but est de vous fournir tous les outils nécessaires pour vous permettre <span class="text-primary">de passer au niveau supérieur</span> sans complications. 
+      </Fragment>
 
-    <Fragment class="float-in-on-scroll">
-      <h2>
-        Etape #1: Comprendre vos besoins et votre entreprise
-      </h2>
-      Vous êtes un spécialiste dans votre domaine ? 
-      Nous pouvons vous aider à prendre un virage électronique de façon simple et efficace ! 
-    </Fragment>
-    <Fragment class="float-in-on-scroll">
-      <h2>
-        Etape #1: Comprendre vos besoins et votre entreprise
-      </h2>
-      Vous êtes un spécialiste dans votre domaine ? 
-      Nous pouvons vous aider à prendre un virage électronique de façon simple et efficace ! 
-    </Fragment>
-    <Fragment class="float-in-on-scroll">
-      <h2>
-        Etape #1: Comprendre vos besoins et votre entreprise
-      </h2>
-      Vous êtes un spécialiste dans votre domaine ? 
-      Nous pouvons vous aider à prendre un virage électronique de façon simple et efficace ! 
-    </Fragment>
-    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {
-        features.map(({ title, description, icon }) => (
-          <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
-            <div class="h-16 w-16 rounded-full border-2 border-current p-3">
-              <Icon name={icon} />
+      <ol class="listfeatures">
+        <li>
+          <div class="item-content">
+            <i class="fas fa-check features-icon"></i>
+            <div>
+              <div class="features-title">Étape #1: Nous comprenons vos besoins et votre entreprise</div>
+              Nous comprenons ce que vous faites, votre spécialisation et vos différents services afin de vous offrir un service adapté à vos besoins.
             </div>
-            <p class="text-center font-extrabold text-xl">{title}</p>
-            <p class="text-center text-offset text-sm">{description}</p>
-          </li>
-        ))
-      }
-    </ul>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <i class="fas fa-check features-icon"></i>
+            <div>
+              <div class="features-title">Étape #2: Nous créons votre identité digitale</div>
+              En se basant sur ce que nous avons découvert, nous créons un site internet et une identité de marque calquée sur votre propre vision.
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <i class="fas fa-check features-icon"></i>
+            <div>
+              <div class="features-title">Étape #3: Nous vous obtenons des clients</div>
+              Une fois votre accord reçu, nous mettons en ligne votre site et les réseaux sociaux et faisons en sorte de vous obtenir des clients.
+            </div>
+          </div>
+        </li>
+      </ol>
   </ContentSection>
 </section>
 
+<ContentSection title="Notre Offre">
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
+<!-- <br> -->
+
+<!-- <section class="relative h-full">
+
+  <div>
+    <ContentSection 
+        title="Le plus beau? Vous ne payer rien avant d’avoir obtenu des résultats." 
+        id="intro" 
+        data-aos="fade-up" 
+        data-aos-duration="1000" 
+        data-aos-delay="50"
+        >
+    
+        <Fragment class="float-in-on-scroll">
+          Nous cherchons des partenaires avec qui collaborer, et nous ne croyons pas que vous avez a payer sans voir de résultats !
+        </Fragment>
+    </ContentSection>
+  </div>
+</section> -->
+
+
+</section>
