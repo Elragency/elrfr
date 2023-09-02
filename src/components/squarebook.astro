@@ -1,0 +1,39 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/ct-section2.astro";
+import astronautImage from "~/assets/mountain.png";
+import Bgimage2 from "~/components/bg-image.astro";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+---
+<section class="relative h-full">
+
+  <div class="p-4 sm:p-8 absolute grid h-full fade-up">
+    <ContentSection 
+        title="Nous ne vendons pas de services, nous devenons partenaire." 
+        id="intro" 
+        data-aos="fade-up" 
+        data-aos-duration="1000" 
+        data-aos-delay="50"
+        >
+    
+        <Fragment class="float-in-on-scroll">
+          Vous êtes un spécialiste dans votre domaine ? 
+          Nous pouvons vous aider à prendre un virage électronique de façon simple et efficace ! 
+        </Fragment>
+        <div class="flex justify-center"> <!-- Flex container to center the button horizontally -->
+          <a href="#contact" 
+              class="inline-block btn-small text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-4 py-1 text-center dark:text-white dark:focus:ring-purple-900 btn2">
+              SE METTRE EN LIGNE
+          </a>
+      </div>
+
+    </ContentSection>
+  </div>
+    <!-- Embed the Square Appointments booking system -->
+    <script type="module">
+        import 'https://square.site/appointments/buyer/widget/mgo2v65terbkav/LQ6VR93EFKMZ5.js';
+      </script>
+</section>
