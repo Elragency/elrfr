@@ -13,3 +13,4 @@ const showcase = defineCollection({
 export const collections = {
   showcase,
 };
+
