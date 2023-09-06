@@ -1,7 +1,7 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
-import astronautImageBig from "~/assets/mac-big.png";
+import astronautImageBig from "~/assets/mc-v3.png";
 import astronautImageSmall from "~/assets/mac-small.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
@@ -25,20 +25,20 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
 
       <!-- Background Text: ELR and Agency for mobile -->
       <div class="flex flex-col items-center justify-center z-10 space-y-4 sm:hidden mt-20" > <!-- sm:hidden ensures it's only shown on small screens -->
-          <div class="gradient-text text-center font-extrabold tracking-tighter urmom text-10vw">ELR</div>
-          <div class="gradient-text text-center font-extrabold tracking-tighter urmom text-20vw">Agency</div>
+          <div class="gradient-text text-center font-extrabold tracking-tighter urmom text-5vw"></div>
+          <!-- <div class="gradient-text text-center font-extrabold tracking-tighter urmom text-20vw ">Agence</div> -->
       </div>
 
       <!-- Background Text: Agency for larger screens -->
-      <div class="smally background-text gradient-text text-center font-extrabold tracking-tighter urmom absolute inset-0 flex items-center justify-center w-screen h-screen text-20vw z-0 big-hidden sm:flex sm:items-center">
-          Agency
+      <div class=" background-text gradient-text text-center font-extrabold tracking-tighter urmom absolute inset-0 flex items-center justify-center w-screen h-screen text-20vw z-0 big-hidden sm:flex sm:items-center">
+          Agence
       </div>
 
       <!-- Picture and Button -->
       <div class="flex flex-col items-center justify-center z-10 space-y-4 marginal sm:mt-0"> <!-- Adjusted margin for mobile view -->
 
           <div class="background-text-container relative w-full" id="astronaut">
-              <div class="responsiveAstronaut small-screen-padding">
+              <div class="responsiveAstronaut small-screen-padding  ">
                   <Picture
                       class="h-full w-full object-cover urmom ontop-image relative z-10"
                       src={astronautImageBig}
@@ -46,15 +46,15 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
                       widths={widths}
                       sizes={sizes}
                       loading="eager"
-                      alt="A floating astronaut in a space suit"
+                      alt="Un site internet volant"
                   />
               </div>
               <br>
               <div class="flex justify-center">
-                  <a href="#contact" 
-                      class="inline-block btn-small text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-4 py-1 text-center dark:text-white dark:focus:ring-purple-900 btn2">
-                      SE METTRE EN LIGNE
-                  </a>
+                <a href="#contact" 
+                class="inline-block btn-small text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-4 py-1 text-center dark:text-white dark:focus:ring-purple-900 btn2">
+                SE METTRE EN LIGNE
+             </a>
               </div>
               <br>
           </div>

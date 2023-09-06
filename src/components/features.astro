@@ -43,45 +43,8 @@ const features: Array<FeatureItem> = [
   },
 ];
 ---
-<section style="padding-top: 50px; margin: 30px;">
-  <ContentSection title="Comment Nous Fonctionnons" id="fonctions" class="float-in-on-scroll">
-      <Fragment slot="lead">
-          Notre but est de vous fournir tous les outils nécessaires pour vous permettre <span class="text-primary">de passer au niveau supérieur</span> sans complications. 
-      </Fragment>
 
-      <ol class="listfeatures">
-        <li>
-          <div class="item-content">
-            <i class="fas fa-check features-icon"></i>
-            <div>
-              <div class="features-title">Étape #1: Nous comprenons vos besoins et votre entreprise</div>
-              Nous comprenons ce que vous faites, votre spécialisation et vos différents services afin de vous offrir un service adapté à vos besoins.
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content">
-            <i class="fas fa-check features-icon"></i>
-            <div>
-              <div class="features-title">Étape #2: Nous créons votre identité digitale</div>
-              En se basant sur ce que nous avons découvert, nous créons un site internet et une identité de marque calquée sur votre propre vision.
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content">
-            <i class="fas fa-check features-icon"></i>
-            <div>
-              <div class="features-title">Étape #3: Nous vous obtenons des clients</div>
-              Une fois votre accord reçu, nous mettons en ligne votre site et les réseaux sociaux et faisons en sorte de vous obtenir des clients.
-            </div>
-          </div>
-        </li>
-      </ol>
-  </ContentSection>
-</section>
-
-<ContentSection title="Notre Offre">
+<ContentSection title="Ce Que Nous Offrons" id=offre>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
       features.map(({ title, description, icon }) => (
