@@ -19,12 +19,19 @@ import "~/styles/index.css";
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Nous aidons les PME à prendre un virage électronique en modernisant leurs services et en automatisant leur processus.";
+  "Nous aidons les PME à prendre un virage électronique en modernisant leurs services et en automatisant leur processus. Nous créons votre présence digitale et modernisons vos procédés pour améliorer vos services.";
 ---
 
 <!doctype html>
 <html lang="fr" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TPW94QBF');</script>
+  <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -68,6 +75,12 @@ const description =
   </script>
 </head>
   <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
+   
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPW94QBF"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
     <Header />
     <Splash />
     <section class="relative h-full">
