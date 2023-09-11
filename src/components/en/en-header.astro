@@ -2,14 +2,14 @@
 import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher2.astro";
 import type { NavItem } from "~/types";
-import LanguagePicker from '~/components/LanguagePicker2.astro';
+import LanguagePicker from '~/components/LanguagePicker.astro';
 
 const navItems: Array<NavItem> = [
-  { title: "Nos Services", url: "#offre" },
-  { title: "À Propos", url: "#propos" },
+  { title: "Our Services", url: "#offre" },
+  { title: "About", url: "#propos" },
   { title: "Portfolio", url: "#portfolio" },
   // { title: "Blog", url: "/blog" },
-  { title: "Débutez!", url: "#contact" },
+  { title: "Start Now!", url: "#contact" },
 ];
 ---
 
@@ -18,7 +18,7 @@ const navItems: Array<NavItem> = [
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="/">
-    <h1 class="sr-only">Agence ELR</h1>
+    <h1 class="sr-only">ELR Agency</h1>
     <Icon name="logomark" class="h-10" />
     <Icon name="wordmark" class="hidden h-4 sm:block" />
   </a>

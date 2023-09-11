@@ -1,0 +1,88 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "Google Ads",
+    icon: "frameworks/adwords",
+    url: "https://ads.google.com/intl/fr_ca/start/overview-ha/?subid=ca-fr-ha-awa-bk-c-scru!o3~Cj0KCQjwusunBhCYARIsAFBsUP8Mt9nHryyS2thIJeRG513Oc7pXXS7T9C_vR5mqrqiuGEd4jjJu6-UaAtfHEALw_wcB~144209551824~aud-1026383325320:kwd-94527731~17420550934~663398205272&gad=1&gclid=Cj0KCQjwusunBhCYARIsAFBsUP8Mt9nHryyS2thIJeRG513Oc7pXXS7T9C_vR5mqrqiuGEd4jjJu6-UaAtfHEALw_wcB&gclsrc=aw.ds",
+  },
+  {
+    title: "GA4",
+    icon: "frameworks/ga4",
+    url: "https://analytics.google.com/",
+  },
+  {
+    title: "GTM",
+    icon: "frameworks/gtm",
+    url: "https://tagmanager.google.com/#/home",
+  },
+  {
+    title: "Growth Driven",
+    icon: "frameworks/vue",
+    url: "https://app.hubspot.com/academy/achievements/lpzbzd9l/en/1/edouard-le-rouzes/growth-driven-design",
+  },
+  {
+    title: "SEO",
+    icon: "frameworks/seo",
+    url: "https://app.hubspot.com/academy/achievements/4ps4rtf7/en/1/edouard-le-rouzes/seo",
+  },
+  {
+    title: "Digital MKT",
+    icon: "frameworks/digitalmkt",
+    url: "https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce",
+  },
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "Griffith",
+    icon: "platforms/griffith",
+    url: "https://www.griffith.edu.au/",
+  },
+  {
+    title: "Johns Hopkins",
+    icon: "platforms/hopkins",
+    url: "https://coursera.org/share/d5873ad573cf1b99f551a4b0acba597f",
+  },
+  {
+    title: "Coursera",
+    icon: "platforms/coursera",
+    url: "https://coursera.org/share/1469133f161e78eedd2ca5ef13a698ae",
+  },
+  {
+    title: "Champlain College",
+    icon: "platforms/champlain",
+    url: "https://champlainsaintlambert.ca/",
+  },
+  {
+    title: "Hubspot",
+    icon: "platforms/hubspot",
+    url: "https://app.hubspot.com/academy",
+  },
+  {
+    title: "Duke",
+    icon: "platforms/duke",
+    url: "https://duke.edu/",
+  },
+];
+---
+<br>
+<ContentSection title="Qui Sommes-Nous ?" id="propos">
+  <Fragment slot="lead">
+    <span class="text-primary">ELR Agency </span>is a new consulting agency that specializes in <br>
+    <span class="text-primary">modernizing SMEs </span>and business development.
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Certifications"
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    items={platforms}
+    title="Diplomes"
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>

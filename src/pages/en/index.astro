@@ -1,21 +1,18 @@
 ---
 import "@fontsource-variable/inter";
-import Propos from "~/components/propos.astro";
-import Features from "~/components/features.astro";
-import Footer2 from "~/components/footer2.astro";
-import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
+import Propos from "~/components/en/en-propos.astro";
+import Features from "~/components/en/en-features.astro";
+import Footer2 from "~/components/en/en-footer.astro";
+import Header from "~/components/en/en-header.astro";
+import Intro from "~/components/en/en-intro.astro";
 import Beau from "~/components/plusbeau.astro";
-import Portfolio from "~/components/portfolio.astro";
-import Splash from "~/components/splash.astro";
-import Contact from "~/components/contact.astro";
-import Cards from "~/components/cards.astro";
-import Pricing from "~/components/Pricing.astro";
-import About from "~/components/about.astro";
-
-
+import Portfolio from "~/components/en/en-portfolio.astro";
+import Splash from "~/components/en/en-splash.astro";
+import Contact from "~/components/en/en-contact.astro";
+import Pricing from "~/components/en/en-Pricing.astro";
+import About from "~/components/en/en-about.astro";
+import LanguagePicker from '~/components/LanguagePicker.astro';
 import { getLangFromUrl } from '~/i18n/utils';
-const lang = getLangFromUrl(Astro.url);
 
 // import Booking from "~/components/squarebook.astro";
 import "~/styles/index.css";
@@ -27,7 +24,7 @@ const description =
 ---
 
 <!doctype html>
-<html lang={lang} class="h-full motion-safe:scroll-smooth" data-theme="dark">
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,7 +40,7 @@ const description =
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
     
 
-    <title>Agence ELR | Le Meilleur Allié Des PME</title>
+    <title>ELR Agency | Le Meilleur Allié Des PME</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
@@ -86,14 +83,13 @@ const description =
   <!-- End Google Tag Manager (noscript) -->
   
     <Header />
+
     <Splash />
     <section class="relative h-full">
       <div class="space-y-24 px-8 py-32">
         <Intro />
-        
       </div>
       </section>
-      <br><br>
       <About />
       <Features />
       <br>

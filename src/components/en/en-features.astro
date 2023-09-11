@@ -1,0 +1,83 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "A fast and accessible service",
+    description:
+      "We can get your business online in just days ensuring we have a custom website for your business.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Optimized for the web (SEO)",
+    description:
+      "Having a website is only useful if it shows up when someone searches for you. By optimizing your SEO, this is not a possibility, but a certainty.",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Become a reference Online",
+    description:
+      "By using artificial intelligence, we are able to position you as experts in your field in the eyes of your potential customers.",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Additional integrations",
+    description:
+      "Do you need a platform to allow your customers to make appointments? Do you need specific tools? We can take care of it.",
+    icon: "mdi:graph",
+  },
+  {
+    title: "Additional Services For You",
+    description:
+      "A website is only the beginning, by choosing our services, we offer you additional tools such as a corporate email or effective automations.",
+    icon: "mdi:directions-fork",
+  },
+
+  {
+    title: "Complete Marketing 360",
+    description:
+      "Understand who your customers are and where they are in order to be able to carry out comprehensive targeted advertising campaigns without having to rack your brains.",
+    icon: "mdi:account-group",
+  },
+];
+---
+
+<ContentSection title="What We Offer" id=offre>
+  <ul class="fadeIn grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
+<!-- <br> -->
+
+<!-- <section class="relative h-full">
+
+  <div>
+    <ContentSection 
+        title="Le plus beau? Vous ne payer rien avant d’avoir obtenu des résultats." 
+        id="intro" 
+        data-aos="fade-up" 
+        data-aos-duration="1000" 
+        data-aos-delay="50"
+        >
+    
+        <Fragment class="float-in-on-scroll">
+          Nous cherchons des partenaires avec qui collaborer, et nous ne croyons pas que vous avez a payer sans voir de résultats !
+        </Fragment>
+    </ContentSection>
+  </div>
+</section> -->
+
+
+</section>

@@ -13,4 +13,15 @@ const showcase = defineCollection({
 export const collections = {
   showcase,
 };
+const blogCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    author: z.string(),
+    date: z.date()
+  })
+});
+
+export const collections1 = {
+  'blog': blogCollection
+};
 

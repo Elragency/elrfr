@@ -1,0 +1,24 @@
+---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '~/i18n/utils';
+
+import LanguagePicker from '~/components/LanguagePicker.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+<ul>
+  <li>
+      <a href={`/${lang}/index/`}>
+        {t('nav.home')}
+      </a>
+  </li>
+  <li>
+      <a href={`/${lang}/about/`}>
+        {t('nav.about')}
+      </a>
+  </li>
+</ul>
+<LanguagePicker />
+
+<br><br>

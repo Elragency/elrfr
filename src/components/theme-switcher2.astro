@@ -1,0 +1,86 @@
+---
+import { languages } from '../i18n/ui'; // Import your languages object
+import { Icon } from "astro-icon";
+
+import { useTranslations, getLangFromUrl, useTranslatedPath } from '~/i18n/utils'; // Import your translation and path utils
+const lang = getLangFromUrl(Astro.url); // Determine the current language
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+const otherLang = lang === 'en' ? 'fr' : 'en'; // Replace with your own logic if you have more languages
+---
+
+<!--
+  negative margin is sum of button width (8) and gap size of flex parent (6)
+  TODO don't hardcode these values
+-->
+<button id="language-switcher" type="button">
+    <!-- Display the icon for changing the language -->
+    <div id="icon-language-switch">
+        <Icon name="theme/light" class="h-8" />
+      <span class="sr-only">{t('switch_language')}</span> <!-- replace 'switch_language' with your own translation key -->
+    </div>
+  
+    <!-- Dropdown containing links to switch the language -->
+    <ul class="hidden-dropdown">
+      {Object.entries(languages).map(([langCode, label]) => (
+        <li>
+          <a href={translatePath(`/${langCode}/index/`)}>{label}</a>
+        </li>
+      ))}
+    </ul>
+  </button>
+
+<script>
+  import invariant from "tiny-invariant";
+
+//   const updateIcon = () => {
+//     const themeCurrent = getThemeCurrent();
+//     document
+//       .querySelector(`#icon-theme-${themeCurrent}`)
+//       ?.classList.add("hidden");
+//     const themeNext = getThemeNext();
+//     document
+//       .querySelector(`#icon-theme-${themeNext}`)
+//       ?.classList.remove("hidden");
+//   };
+
+//   button.addEventListener("click", () => {
+//     const themeNext = getThemeNext();
+//     document.documentElement.dataset.theme = themeNext;
+//     localStorage.setItem("theme", themeNext);
+//     updateIcon();
+//   });
+
+//   updateIcon();
+
+document.addEventListener("DOMContentLoaded", function() {
+  const languageSwitcher = document.getElementById("language-switcher");
+
+  languageSwitcher.addEventListener("click", function() {
+    const currentLang = window.location.pathname.split('/')[1];
+    const otherLang = currentLang === 'fr' ? 'en' : 'fr';  // Correctly switch between 'en' and 'fr'
+    const newPath = window.location.pathname.replace(`/${currentLang}/`, `/${otherLang}/`);
+
+    console.log("currentLang:", currentLang);  // Debug line
+    console.log("otherLang:", otherLang);      // Debug line
+    console.log("newPath:", newPath);          // Debug line
+    
+    window.location.href = newPath;
+  });
+});
+
+</script>
+
+<style>
+  :global(.fixed-header) #theme-switcher {
+    @apply ml-0 scale-100;
+  }
+  .hidden-dropdown {
+  display: none;
+
+}
+
+.show-dropdown {
+  display: block;
+}
+</style>
