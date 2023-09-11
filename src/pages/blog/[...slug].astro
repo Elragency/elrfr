@@ -2,14 +2,14 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
-export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
-}
-type Props = CollectionEntry<'blog'>;
+// export async function getStaticPaths() {
+// 	const posts = await getCollection('blog');
+// 	return posts.map((post) => ({
+// 		params: { slug: post.slug },
+// 		props: post,
+// 	}));
+// }
+// type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await post.render();
@@ -28,7 +28,7 @@ const { lang, slug } = Astro.params;
 const page = Astro.props;
 const formattedDate = page.data.date.toLocaleString(lang);
 
-const { Content } = await page.render();
+// const { Content } = await page.render();
 ---
 
 <BlogPost {...post.data}>
