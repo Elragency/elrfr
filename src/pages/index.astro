@@ -93,7 +93,9 @@ const description =
         
       </div>
       </section>
-      <br><br>
+      <section class="hidden-on-small-br">
+        <br><br><br><br><br><br>
+      </section>
       <About />
       <Features />
       <br>
@@ -129,3 +131,16 @@ for (const switchInput of switchInputs) {
       </script>
   </body>
 </html>
+
+<style>
+  .hidden-on-small-br {
+    display: none;
+  }
+
+  /* Using media query to show it only on small screens (below 768px in this example) */
+  @media screen and (max-width: 767px) {
+    .hidden-on-small-br {
+      display: block; /* Or inline, inline-block, flex, etc., depending on your layout needs */
+    }
+  }
+</style>
