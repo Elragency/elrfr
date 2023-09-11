@@ -542,7 +542,7 @@ margin-top: 0% !important;
 .footer-form .input-field {
   background-color: var(--white);
   color: var(--rich-black-fogra-29-1);
-  padding-block: 18px;
+  padding-block: 4px;
   padding-inline: 30px 80px;
   border-radius: var(--radius-10);
   background-color: white;
