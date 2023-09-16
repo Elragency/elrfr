@@ -1,0 +1,32 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/ct-section2.astro";
+import astronautImage from "~/assets/mountain.png";
+import Bgimage2 from "~/components/bg-image.astro";
+import Aboutimg from "~/assets/about-image.svg";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+---
+<section class="relative h-full">
+
+  <div class="p-4 sm:p-8 absolute grid h-full ">
+    <ContentSection 
+        title="Small enterprise are not well equipped to thrive online, we can fix that." 
+        id="intro" 
+        >
+    
+        <Fragment class="">
+          Having completed studies in entrepreneurship at Cégep de Champlain, a DEP in business launch and concluded with a Bachelor of Business Administration with a major in marketing at an Australian university, I am confident in saying that I can help you grow your business.        </Fragment>
+        <div class="flex justify-center"> <!-- Flex container to center the button horizontally -->
+          <a href="#contact" 
+              class="inline-block btn-small text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-4 py-1 text-center dark:text-white dark:focus:ring-purple-900 btn2">
+              GO ONLINE
+          </a>
+      </div>
+    </ContentSection>
+    
+  </div>
+</section>
+

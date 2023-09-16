@@ -76,14 +76,31 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
             </a> -->
           </div>
           <div class="map-box container-block">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44784.38573337523!2d-73.45036194999999!3d45.449170300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc90589d64dba89%3A0xda6c733c59f64a6f!2sBrossard%2C%20QC!5e0!3m2!1sen!2sca!4v1694765940559!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-responsive">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357578.6675811776!2d-74.04220015463939!3d45.55870668049615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC!5e0!3m2!1sen!2sca!4v1694866434357!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
  
   <style>
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+ 
 
 
 .contact_us_6 .text-blk {

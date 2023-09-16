@@ -1,10 +1,18 @@
 ---
 import "@fontsource-variable/inter";
+
+import Header from "~/components/en/en-header.astro";
+import Elrintro from "~/components/en/en-elrintro.astro";
+import Faq from "~/components/en/en-elrfaq.astro";
+import Map from "~/components/en/en-map.astro";
+import Elrsplash from "~/components/en/en-elrsplash.astro";
+
+
 import Propos from "~/components/propos.astro";
 import Features from "~/components/features.astro";
 import Footer2 from "~/components/footer3.astro";
-import Header from "~/components/header.astro";
-import Elrintro from "~/components/elrintro.astro";
+
+
 import Beau from "~/components/plusbeau.astro";
 import Portfolio from "~/components/portfolio.astro";
 import Splash from "~/components/splash.astro";
@@ -13,11 +21,9 @@ import Cards from "~/components/cards.astro";
 import Pricing from "~/components/Pricing.astro";
 import About from "~/components/about.astro";
 import Elrpropos from "~/components/elrpropos.astro";
-import Elrsplash from "~/components/elrsplash.astro";
+
 import { Picture } from "@astrojs/image/components";
 import Aboutimg from "~/assets/about-image.svg";
-import Faq from "~/components/elrfaq.astro";
-import Map from "~/components/map.astro";
 
 
 
@@ -35,7 +41,7 @@ import "~/styles/index.css";
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Apprenez à connaitre l'Agence ELR, l'agence en charge du développement des PMEs au Québec.";
+  "Learn to know more about ELR Agency!";
 ---
 
 <!doctype html>
@@ -55,7 +61,7 @@ const description =
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
     
 
-    <title>Agence ELR | Le Meilleur Allié Des PME</title>
+    <title>ELR Agency | The Best Allied Of SMEs</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
@@ -78,7 +84,7 @@ const description =
       </div>
       </section>
       <section class="hidden-on-small-br">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
       </section>
 
       <!-- ====== About Section Start -->
@@ -99,24 +105,23 @@ class="lg:pt-[120px] lg:pb-[120px]"
             <span
               class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
             >
-              À Propos
+              About
             </span>
             <h2
               class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
             >
-              ELR est l'agence qui se concentre sur les PME
+              ELR is the agency that focuses on small businesses
             </h2>
             <p class="mb-9 text-base leading-relaxed text-body-color">
-              Nous offrons des solutions complètes pour permettre à toutes les entreprises d'avoir une vitrine sur le web au travers d'un site web performant qui remplit son travail en vous apportant une plus grande clientèle.
-            </p>
+              We offer complete solutions to allow all businesses to have a showcase on the web through a high-performance website that does its job by bringing you a larger customer base.           
+             </p>
             <p class="mb-9 text-base leading-relaxed text-body-color">
-                J'aide les entreprises à accélérer leur croissance grâce à une planification stratégique et des solutions web de pointe. De la création de sites web performants à la mise en place de stratégies marketing qui génèrent un bon retour sur investissement, mon équipe et moi avons ce qu'il vous faut.
-            </p>
+              I help businesses accelerate their growth through strategic planning and cutting-edge web solutions. From creating high-performance websites to implementing marketing strategies that generate a good return on investment, my team and I have what you need.            </p>
             <a
               href="#contact"
               class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
             >
-              Débutez Aujourd'hui!
+              Start Now!
             </a>
           </div>
           <div class="text-center">

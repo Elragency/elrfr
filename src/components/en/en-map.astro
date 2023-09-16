@@ -10,56 +10,56 @@ import Aboutimg from "~/assets/about-image.svg";
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
-<div class="contact_us_6">
+<div class="contact_us_6" id="contact">
     <div class="responsive-container-block container">
-      <form class="form-box">
+      <form class="form-box" name="contact" method="POST" data-netlify="true" action="/merci"> 
         <div class="container-block form-wrapper">
           <div class="mob-text">
             <p class="text-blk contactus-head">
-              Entrons en contact
+              Let's Get In Touch!
             </p>
             <p class="text-blk contactus-subhead">
-              Nous sommes situés sur la rive sud de Montréal et pouvons nous déplacer.
+              It's time to scale your business.
             </p>
           </div>
           <div class="responsive-container-block" id="i2cbk">
             <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-3">
               <p class="text-blk input-title">
-                NOM COMPLET
+                FULL NAME
               </p>
-              <input class="input" id="ijowk-3" name="FirstName" placeholder="Please enter first name...">
+              <input class="input" id="ijowk-3" name="FirstName" placeholder="Please enter your full name ...">
             </div>
             <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ip1yp">
               <p class="text-blk input-title">
-                COURRIEL
+                EMAIL
               </p>
-              <input class="input" id="ipmgh-3" name="Email" placeholder="Please enter email...">
+              <input class="input" id="ipmgh-3" name="Email" placeholder="Please enter your email ...">
             </div>
             <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ih9wi">
               <p class="text-blk input-title">
-                NUMÉRO DE TÉLÉPHONE
+                PHONE NUMBER
               </p>
-              <input class="input" id="imgis-3" name="PhoneNumber" placeholder="Please enter phone number...">
+              <input class="input" id="imgis-3" name="PhoneNumber" placeholder="Please enter your phone number ...">
             </div>
             <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-3">
               <p class="text-blk input-title">
-                PARLEZ-NOUS DE VOTRE PROJET
+                LET US KNOW WHAT IS YOUR PROJECT
               </p>
-              <textarea class="textinput input" id="i5vyy-3" name="textarea" placeholder="Please enter query..."></textarea>
+              <textarea class="textinput input" id="i5vyy-3" name="textarea" placeholder="ow can we make your dreams come true..."></textarea>
             </div>
           </div>
           <button class="btn2" id="w-c-s-bgc_p-1-dm-id-2">
-            ENVOYER
+            SEND
           </button>
         </div>
       </form>
       <div class="responsive-cell-block wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">
         <div class="map-part">
           <p class="text-blk map-contactus-head" id="w-c-s-fc_p-1-dm-id">
-            Pour nous joindre
+            To contact us
           </p>
           <p class="text-blk map-contactus-subhead">
-            Nous sommes situés sur la rive sud de Montréal et pouvons nous déplacer.
+            We are located on the south shore of Montreal and can travel.
           </p>
           <div class="social-media-links mob">
             <!-- <a class="social-icon-link" href="#" id="ix94i-2-2">
@@ -76,14 +76,31 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
             </a> -->
           </div>
           <div class="map-box container-block">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44784.38573337523!2d-73.45036194999999!3d45.449170300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc90589d64dba89%3A0xda6c733c59f64a6f!2sBrossard%2C%20QC!5e0!3m2!1sen!2sca!4v1694765940559!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-responsive">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357578.6675811776!2d-74.04220015463939!3d45.55870668049615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC!5e0!3m2!1sen!2sca!4v1694866434357!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
  
   <style>
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+ 
 
 
 .contact_us_6 .text-blk {
