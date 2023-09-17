@@ -11,7 +11,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 <section class="relative h-full">
 
-  <div class="p-4 sm:p-8 absolute grid h-full fade-up">
+  <div class="p-4 sm:p-8 absolute grid h-full">
     <ContentSection 
         title="Nous ne vendons pas de services, nous devenons partenaire." 
         id="intro" 
@@ -32,19 +32,6 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
               SE METTRE EN LIGNE
           </a>
       </div>
-      
-
-        <script>
-document.addEventListener('scroll', function() {
-  let title = document.querySelector('.fade-up');
-  let rect = title.getBoundingClientRect();
-
-  // Check if the title is in the viewport
-  if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-    title.classList.add('active');
-  }
-});
-        </script>
 
     </ContentSection>
   </div>
