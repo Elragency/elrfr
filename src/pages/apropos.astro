@@ -54,30 +54,9 @@ const description =
     <meta name="generator" content={generator} />
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
     <script  src="~/assets/js/burger.js"></script>
-    <script>
-      const tableWrapper = document.querySelector(".table-wrapper");
-const switchInputs = document.querySelectorAll(".switch-wrapper input");
-const prices = tableWrapper.querySelectorAll(".price");
-const toggleClass = "hide";
-
-for (const switchInput of switchInputs) {
-switchInput.addEventListener("input", function () {
-  for (const price of prices) {
-    price.classList.add(toggleClass);
-  }
-  const activePrices = tableWrapper.querySelectorAll(
-    `.price.${switchInput.id}`
-  );
-  for (const activePrice of activePrices) {
-    activePrice.classList.remove(toggleClass);
-  }
-});
-}
-      // AOS.init();
-    </script>
-    <script>
+    <!-- <script>
   
   var swiper = new Swiper(".swiper", {
     effect: "coverflow",
@@ -110,7 +89,7 @@ switchInput.addEventListener("input", function () {
       }
     }
   });
-    </script>
+    </script> -->
     
 
     <title>Agence ELR | Le Meilleur Allié Des PME</title>
