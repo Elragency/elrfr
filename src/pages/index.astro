@@ -7,6 +7,7 @@ import Features from "~/components/features.astro";
 import Footer2 from "~/components/footer3.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
+import Testi from "~/components/testimony.astro";
 import Map from "~/components/map2.astro";
 
 import Beau from "~/components/plusbeau.astro";
@@ -14,8 +15,9 @@ import Portfolio from "~/components/portfolio.astro";
 import Splash from "~/components/splash.astro";
 import Contact from "~/components/contact.astro";
 import Pricing from "~/components/Pricing.astro";
-import About from "~/components/about.astro";
+import About from "~/components/about2.astro";
 import Burger from "~/components/burger.astro";
+
 
 
 import { getLangFromUrl } from '~/i18n/utils';
@@ -72,19 +74,23 @@ const description =
     <section class="relative h-full">
       <div class="space-y-24 px-8 py-32">
         <Intro />
-        
       </div>
       </section>
       <section class="hidden-on-small-br">
-        <br><br><br><br><br><br><br><br>
+        <br><br><br>
       </section>
       <About />
+      <br><br><br><br>
+      <section class="hidden-on-small-br">
+        <br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
+      </section>
       <Features />
       <br>
       <!-- <Cards /> -->
       <Propos />
       <!-- <Booking /> -->
       <Portfolio />
+      <Testi />
       </div>
       <!-- <Pricing /> -->
       <Map />

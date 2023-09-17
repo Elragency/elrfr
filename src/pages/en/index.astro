@@ -8,10 +8,11 @@ import Intro from "~/components/en/en-intro.astro";
 import Beau from "~/components/plusbeau.astro";
 import Portfolio from "~/components/en/en-portfolio.astro";
 import Splash from "~/components/en/en-splash.astro";
-import Contact from "~/components/en/en-contact.astro";
-import Pricing from "~/components/en/en-pricing.astro";
-import About from "~/components/en/en-about.astro";
+import About from "~/components/en/en-about2.astro";
 import LanguagePicker from '~/components/LanguagePicker.astro';
+import Testi from "~/components/en/en-testimony.astro";
+import Map from "~/components/en/en-map.astro";
+
 import { getLangFromUrl } from '~/i18n/utils';
 
 // import Booking from "~/components/squarebook.astro";
@@ -26,12 +27,14 @@ const description =
 <!doctype html>
 <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
+    
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TPW94QBF');</script>
+
   <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -52,7 +55,7 @@ const description =
     <meta name="twitter:card" content="summary_large_image" />
 
    <!-- initialize theme -->
-   <script is:inline>
+   <!-- <script is:inline>
     const themeSaved = localStorage.getItem("theme");
 
     if (themeSaved) {
@@ -73,7 +76,7 @@ const description =
             : "light";
         }
       });
-  </script>
+  </script> -->
 </head>
   <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
    
@@ -94,6 +97,10 @@ const description =
         <br><br><br><br>
       </section>
       <About />
+      <br><br><br><br>
+      <section class="hidden-on-small-br">
+        <br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br>
+      </section>
       <Features />
       <br>
       <!-- <Cards /> -->
@@ -101,8 +108,8 @@ const description =
       <!-- <Booking /> -->
       <Portfolio />
       </div>
-      <Pricing />
-      <Contact />
+      <Testi />
+      <Map />
 
       <Footer2 />
       <script>
