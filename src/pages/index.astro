@@ -50,27 +50,6 @@ const description =
     <script  src="~/assets/js/burger.js"></script>
 
     <script src="~/assets/js/swiper.js"></script>
-    <script>
-      const tableWrapper = document.querySelector(".table-wrapper");
-const switchInputs = document.querySelectorAll(".switch-wrapper input");
-const prices = tableWrapper.querySelectorAll(".price");
-const toggleClass = "hide";
-
-for (const switchInput of switchInputs) {
-switchInput.addEventListener("input", function () {
-for (const price of prices) {
-price.classList.add(toggleClass);
-}
-const activePrices = tableWrapper.querySelectorAll(
-`.price.${switchInput.id}`
-);
-for (const activePrice of activePrices) {
-activePrice.classList.remove(toggleClass);
-}
-});
-}
-    </script>
-
     <!-- <script src="~/assets/js/pricing.js"></script> -->
     
 
@@ -108,14 +87,14 @@ activePrice.classList.remove(toggleClass);
       <!-- <Booking /> -->
       <Portfolio />
       </div>
-      <Pricing />
+      <!-- <Pricing /> -->
       <Map />
 
       <Footer2 />
       <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-      <script src="~/assets/js/script3.js"></script>
+      <!-- <script src="~/assets/js/script3.js"></script> -->
 
 
       <!-- <script src="~/assets/js/script4.js"></script> -->
