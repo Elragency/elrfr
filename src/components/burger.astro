@@ -1,32 +1,86 @@
-<body>
+---
+import { languages } from '../i18n/ui';
+import { getRouteFromUrl, useTranslatedPath } from '../i18n/utils'; // Add the function import here
+import LanguagePicker from '~/components/LanguagePicker2.astro';
+const route = getRouteFromUrl(Astro.url);
+const translatePath = useTranslatedPath(/* pass the language argument here if required */);
+---
+<body class="important-thing" >
     <!-- partial:index.partial.html -->
     <div class="burger">
       <span></span>
     </div>
     
-    <nav>
-      <ul class="main">
+    <nav class="important-thing" >
+      <ul class="main important-thing">
         <li><a href="/">Home</a></li>
         <li><a href="services">Nos Services</a></li>
         <li><a href="apropos">A Propos</a></li>
         <li><a href="#contact">Contact</a></li>
         <!-- <li><a href="#0">Cart <span>(5)</span></a></li> -->
       </ul>
+
       
       <div class="about">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+        <p>La nouvelle agence web sur la rive sud de montreal</p>
       </div>
-    
+      <div class="about">
+        <p><LanguagePicker /></p>
+      </div>
       
-      <ul class="sub">
+      
+      <!-- <ul class="sub">
         <li><a href="#0">FAQ &amp; Shipping</a></li>
         <li><a href="#0">Terms &amp; Conditions</li>
-      </ul>
+      </ul> -->
     </nav>
+
     <div class="overlay"></div>
+
     <!-- partial -->
+    <script>
+      import MicroModal from "micromodal";
+      import invariant from "tiny-invariant";
+    
+      const menuModalId = "menu-modal";
+    
+      const header = document.querySelector("#page-header") as HTMLElement;
+      const page = document.documentElement;
+      const menu = document.querySelector(`#${menuModalId} ul`);
+      const openNavButton = document.querySelector("#open-nav-button");
+      const closeNavButton = document.querySelector("#close-nav-button");
+    
+      invariant(header, "header should not be null");
+      invariant(menu, "menu should not be null");
+      invariant(openNavButton, "openNavButton should not be null");
+      invariant(closeNavButton, "closeNavButton should not be null");
+    
+      const openMenu = () => {
+        MicroModal.show(menuModalId, { disableScroll: true });
+      };
+    
+      const closeMenu = () => {
+        MicroModal.close(menuModalId);
+      };
+    
+      openNavButton.addEventListener("click", openMenu);
+      closeNavButton.addEventListener("click", closeMenu);
+    
+      document.addEventListener("scroll", () => {
+        const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+        header.classList.toggle("fixed-header", d < 0);
+      });
+    
+      menu.addEventListener("click", (event) => {
+        if ((event.target as HTMLElement).tagName === "A") {
+          closeMenu();
+        }
+      });
+    </script>
+    
 
     </body>
+
 <style>
     /*  COLORS
 ========================================== */
@@ -59,7 +113,8 @@ body.overflow {
   top: 20px;
   right: 20px;
   border-radius: 4px;
-  z-index: 10;
+  z-index: 51;
+  color: white;
 }
 .burger span {
   position: relative;
@@ -79,7 +134,7 @@ body.overflow {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: #2a2a2a;
+  background-color: white;
   outline: 1px solid transparent;
   -webkit-transition-property: background-color, -webkit-transform;
   -moz-transition-property: background-color, -moz-transform;
@@ -102,6 +157,7 @@ body.overflow {
 }
 .burger.clicked span {
   background-color: transparent;
+  
 }
 .burger.clicked span::before {
   -webkit-transform: translateY(9px) rotate(45deg);
@@ -109,6 +165,7 @@ body.overflow {
   -ms-transform: translateY(9px) rotate(45deg);
   -o-transform: translateY(9px) rotate(45deg);
   transform: translateY(9px) rotate(45deg);
+  
 }
 .burger.clicked span::after {
   -webkit-transform: translateY(-9px) rotate(-45deg);
@@ -116,9 +173,11 @@ body.overflow {
   -ms-transform: translateY(-9px) rotate(-45deg);
   -o-transform: translateY(-9px) rotate(-45deg);
   transform: translateY(-9px) rotate(-45deg);
+  z-index: 9999;
 }
 .burger.clicked span:before, .burger.clicked span:after {
   background-color: #ffffff;
+  z-index: 999;
 }
 .burger:hover {
   cursor: pointer;
@@ -238,10 +297,10 @@ nav ul.main li a {
   transition: all 0.3s ease;
 }
 nav ul.main li a span {
-  color: #b7ac7f;
+  color: white;
 }
 nav ul.main li a:hover {
-  color: #b7ac7f;
+  color: white;
 }
 nav .about {
   margin-top: 40px;
@@ -282,7 +341,7 @@ nav .social:after {
   content: "";
   width: 230px;
   height: 2px;
-  background-color: #b7ac7f;
+  background-color: white;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -297,11 +356,12 @@ nav .social a:last-of-type {
   margin-right: 0px;
 }
 nav .social a:hover svg path, nav .social a:hover svg circle {
-  fill: #b7ac7f;
+  fill: #ffffff;
 }
 nav .social a svg {
   width: 100%;
   height: 100%;
+  z-index: 9999;
 }
 nav .social a svg path, nav .social a svg circle {
   fill: #ffffff;
@@ -342,7 +402,7 @@ nav ul.sub li a {
   transition: all 0.3s ease;
 }
 nav ul.sub li a:hover {
-  color: #b7ac7f;
+  color: white;
 }
 
 /*  OVERLAY
@@ -358,7 +418,7 @@ nav ul.sub li a:hover {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #b7ac7f;
+  background-color: white;
   opacity: 0;
   visibility: hidden;
 }
@@ -366,5 +426,11 @@ nav ul.sub li a:hover {
   opacity: 0.8;
   visibility: visible;
 }
+
+.important-thing {
+  z-index: 50;
+}
+
+
 </style>
     

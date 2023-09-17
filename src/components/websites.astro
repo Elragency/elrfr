@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import ContentSection from "~/components/content-section.astro";
+import ShowcaseCard from "~/components/showcase-card.astro";
+
+const featuredSites = await getCollection(
+  "showcase",
+  ({ data }) => "featured" in data
+);
+const orderedSites = featuredSites.sort(
+  (a, b) => a.data.featured! - b.data.featured!
+);
+---
+<br><br>
+<section style="margin: 30px">
+  <ContentSection title="Notre Portfolio" id="portfolio">
+    <Fragment slot="lead" class="marginooo">
+      Nos partenaires qui nous ont fait confiance <span class="text-primary">avec leurs entreprises</span>{" "}
+      <span class="text-primary"></span> et qui n'ont pas été déçues{" "}
+      <div class="text-primary">
+      </div>
+      
+  
+    </Fragment>
+    <div class="max-w-6xl space-y-2">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {orderedSites.map((site) => <ShowcaseCard site={site} />)}
+      </div>
+      <p class="text-right text-sm">
+        <a class="text-primary" href="#contact">
+          ... à votre tour &rarr;
+        </a>
+      </p>
+    </div>
+    <div class="flex justify-center"> <!-- Flex container to center the button horizontally -->
+      <a href="#contact" 
+          class="inline-block btn-small text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-4 py-1 text-center dark:text-white dark:focus:ring-purple-900 btn2">
+          SE METTRE EN LIGNE
+      </a>
+  </div>
+    
+  <br>
+  </ContentSection>
+</section>
+

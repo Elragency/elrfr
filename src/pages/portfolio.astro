@@ -5,8 +5,9 @@ import Services from "~/components/Services.astro";
 import Burger from "~/components/burger.astro";
 import Footer2 from "~/components/footer3.astro";
 import Header from "~/components/header.astro";
-import Splash from "~/components/splash.astro";
+import Splash from "~/components/port-splash.astro";
 import Websites from "~/components/websites.astro";
+import Portfolio from "~/components/portfolio2.astro";
 
 
 import { getLangFromUrl } from '~/i18n/utils';
@@ -31,6 +32,9 @@ const description =
 
     <title>Agence ELR | Le Meilleur Allié Des PME</title>
     <meta name="description" content={description} />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script  src="~/assets/js/burger.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script  src="~/assets/js/burger.js"></script>
@@ -89,15 +93,15 @@ switchInput.addEventListener("input", function () {
     }
   });
     </script>
-  
+
 
 </head>
   <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
-    <!-- <Burger /> -->
+    <Burger />
     <Header />
 
     <Splash />
-      <Services />
+      <Portfolio />
       <section class="hidden-on-small-br">
         <br><br><br><br><br><br><br><br>
       </section>
