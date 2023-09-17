@@ -47,28 +47,10 @@ const description =
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script  src="~/assets/js/burger.js"></script>
-    <script>
-      const tableWrapper = document.querySelector(".table-wrapper");
-const switchInputs = document.querySelectorAll(".switch-wrapper input");
-const prices = tableWrapper.querySelectorAll(".price");
-const toggleClass = "hide";
 
-for (const switchInput of switchInputs) {
-switchInput.addEventListener("input", function () {
-  for (const price of prices) {
-    price.classList.add(toggleClass);
-  }
-  const activePrices = tableWrapper.querySelectorAll(
-    `.price.${switchInput.id}`
-  );
-  for (const activePrice of activePrices) {
-    activePrice.classList.remove(toggleClass);
-  }
-});
-}
-      // AOS.init();
-    </script>
     <script src="~/assets/js/swiper.js"></script>
+    <script src="~/assets/js/script3.js"></script>
+    <!-- <script src="~/assets/js/pricing.js"></script> -->
     
 
 
@@ -85,11 +67,6 @@ switchInput.addEventListener("input", function () {
 
 </head>
   <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
-   
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPW94QBF"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
   
     <Header />
     <Splash />
@@ -118,7 +95,7 @@ switchInput.addEventListener("input", function () {
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
-      <script src="~/assets/js/script3.js"></script>
+
       <!-- <script src="~/assets/js/script4.js"></script> -->
 
       
