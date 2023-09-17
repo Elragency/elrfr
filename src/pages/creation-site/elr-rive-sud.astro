@@ -4,7 +4,7 @@
 
 import Propos from "~/components/propos.astro";
 import Features from "~/components/features.astro";
-import Footer2 from "~/components/footer4.astro";
+import Footer2 from "~/components/footer3.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
 import Testi from "~/components/testimony.astro";
@@ -17,6 +17,15 @@ import Contact from "~/components/contact.astro";
 import Pricing from "~/components/Pricing.astro";
 import About from "~/components/about2.astro";
 import Burger from "~/components/burger.astro";
+
+import Picture from "@astrojs/image/components";
+import Icon from "astro-icon";
+import ContentSection from "~/components/ct-section2.astro";
+import astronautImage from "~/assets/mountain.png";
+import Bgimage2 from "~/components/bg-image.astro";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
 
 
 
@@ -46,16 +55,12 @@ const description =
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
-    <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'> -->
 
     <script  src="~/assets/js/burger.js"></script>
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-    <!-- <script src="~/assets/js/swiper.js"></script> -->
-    <!-- <script src="~/assets/js/pricing.js"></script> -->
     
 
 
-    <title>Agence ELR | Le Meilleur Allié Des PME</title>
+    <title>Agence ELR | Conception de Site Web sur la Rive Sud</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
@@ -73,26 +78,49 @@ const description =
     <Splash />
     <section class="relative h-full">
       <div class="space-y-24 px-8 py-32">
-        <Intro />
+
+<section class=" h-full">
+
+  <div class="p-4 sm:p-8 absolute grid h-full">
+    <ContentSection 
+        title="Création de site internet sur la Rive Sud" 
+        id="intro" 
+        data-aos="fade-up" 
+        data-aos-duration="1000" 
+        data-aos-delay="50"
+        >
+
+        <div class="text-primary text-uppercase">// Notre Spécialité //</div>
+    
+        <Fragment class="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed">
+            <p
+              class="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed"
+            >
+            Vous êtes un entrepreneur situé sur la rive sud de montréal ? Vous démarrez ou souhaitez simplement avoir un site web qui attire de la clientèle, mais vous ne savez pas par où commencer ? 
+            Avec l'Agence ELR, nous allons vous mettre en ligne rapidement avec un site web qui va plaire à votre clientèle et cela, sans devoir vous ruiner!
+            </p>
+            
+        </Fragment>
+        <div class="flex justify-center"> <!-- Flex container to center the button horizontally -->
+          <a href="#contact" 
+              class="inline-block btn-small text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-4 py-1 text-center dark:text-white dark:focus:ring-purple-900 btn2">
+              SE METTRE EN LIGNE
+          </a>
+      </div>
+
+    </ContentSection>
+  </div>
+</section>
+
       </div>
       </section>
-      <section class="hidden-on-small-br">
-        <br><br><br>
-      </section>
+
       <About />
       <br><br><br><br>
       <section class="hidden-on-small-br">
         <br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
       </section>
-      <Features />
-      <br>
-      <!-- <Cards /> -->
-      <Propos />
-      <!-- <Booking /> -->
-      <Portfolio />
-      <Testi />
-      </div>
-      <!-- <Pricing /> -->
+
       <Map />
 
       <Footer2 />
