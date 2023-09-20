@@ -3,14 +3,20 @@
 
 import Services from "~/components/Services.astro";
 import Burger from "~/components/burger.astro";
-import Footer2 from "~/components/footer3.astro";
+import Footer2 from "~/components/footer4.astro";
 import Header from "~/components/header.astro";
-import Splash from "~/components/splash.astro";
+import Splash from "~/components/splash-services.astro";
 import Websites from "~/components/websites.astro";
+import Service1 from "~/components/service1.astro";
+import { Picture } from "@astrojs/image/components";
+import Map from "~/components/map.astro";
 
 
 import { getLangFromUrl } from '~/i18n/utils';
 const lang = getLangFromUrl(Astro.url);
+
+const widths = [450, 800]; // This represents the actual widths of the images
+const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width image when viewport is >= 640px and 450px width image otherwise.
 
 // import Booking from "~/components/squarebook.astro";
 import "~/styles/index.css";
@@ -34,6 +40,7 @@ const description =
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script  src="~/assets/js/burger.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
 
     <script>
   
@@ -81,6 +88,9 @@ const description =
       <section class="hidden-on-small-br">
         <br><br><br><br><br><br><br><br>
       </section>
+      <Service1 />
+
+      <Map />
 
       <!-- <Websites /> -->
       <Footer2 />
@@ -104,6 +114,11 @@ const description =
       display: block; /* Or inline, inline-block, flex, etc., depending on your layout needs */
     }
   }
+
+  /* .margin-box {
+    margin: 20px;
+  }
+   */
 
   
 </style>
