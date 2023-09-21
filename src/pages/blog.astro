@@ -1,22 +1,29 @@
 ---
-// import "@fontsource-variable/inter";
-// import "~/assets/js/script3";
-
+import "@fontsource-variable/inter";
 import Propos from "~/components/propos.astro";
 import Features from "~/components/features.astro";
 import Footer2 from "~/components/footer4.astro";
 import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
-import Testi from "~/components/testimony.astro";
-import Map from "~/components/map2.astro";
-
+import Elrintro from "~/components/elrintro.astro";
 import Beau from "~/components/plusbeau.astro";
 import Portfolio from "~/components/portfolio.astro";
 import Splash from "~/components/splash.astro";
-import Card from "~/components/card.astro";
+import Contact from "~/components/contact2.astro";
+import Cards from "~/components/cards.astro";
 import Pricing from "~/components/Pricing.astro";
-import About from "~/components/about2.astro";
-import Banner from "~/components/banner.astro";
+import About from "~/components/about.astro";
+import Elrpropos from "~/components/elrpropos.astro";
+import Elrsplash from "~/components/elrsplash.astro";
+import { Picture } from "@astrojs/image/components";
+import Aboutimg from "~/assets/about-image.svg";
+import Faq from "~/components/elrfaq.astro";
+import Map from "~/components/map.astro";
+import Blogcontent from "~/components/blog-content.astro";
+
+
+
+const widths = [450, 800]; // This represents the actual widths of the images
+const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width image when viewport is >= 640px and 450px width image otherwise.
 
 
 
@@ -29,7 +36,7 @@ import "~/styles/index.css";
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Nous aidons les PME à prendre un virage électronique en modernisant leurs services et en automatisant leur processus. Nous créons votre présence digitale et modernisons vos procédés pour améliorer vos services.";
+  "Apprenez à connaitre l'Agence ELR, l'agence en charge du développement des PMEs au Québec.";
 ---
 
 <!doctype html>
@@ -42,20 +49,14 @@ const description =
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TPW94QBF');</script>
   <!-- End Google Tag Manager -->
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
-    <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'> -->
-
-    <script  src="~/assets/js/burger.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-    <!-- <script src="~/assets/js/swiper.js"></script> -->
-    <!-- <script src="~/assets/js/pricing.js"></script> -->
-    
+    <script  src="~/assets/js/burger.js"></script>
 
 
     <title>Agence ELR | Le Meilleur Allié Des PME</title>
@@ -69,51 +70,19 @@ const description =
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
 
+   <!-- initialize theme -->
+
 </head>
   <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
-  
     <Header />
-    <Splash />
-    <section class="relative h-full">
-      <div class="space-y-24 px-8 py-32">
-        <Intro />
-      </div>
-      </section>
-      <section class="hidden-on-small-br">
-        <br><br><br>
-      </section>
-      <About />
-      <br><br><br><br>
-      <section class="hidden-on-small-br">
-        <br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
-      </section>
-      <Features />
-      <br>
-      <!-- <Cards /> -->
-      <!-- <Banner /> -->
-      <Propos />
-      <!-- <Booking /> -->
 
-      <Portfolio />
-      <Testi />
-      <Card />
-      </div>
-      <!-- <Pricing /> -->
+      <Blogcontent />
       <Map />
-
       <Footer2 />
-
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-
-
-      <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script> -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
-      <!-- <script src="~/assets/js/script3.js"></script> -->
-
-
-      <script src="~/assets/js/banner.js"></script>
-
       
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   </body>
 </html>
 
@@ -128,4 +97,8 @@ const description =
       display: block; /* Or inline, inline-block, flex, etc., depending on your layout needs */
     }
   }
+  .margin-box {
+    margin: 20px;
+  }
+  
 </style>

@@ -40,42 +40,8 @@ const description =
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script  src="~/assets/js/burger.js"></script>
+    <script  src="~/assets/js/swiper.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
-
-    <script>
-  
-  var swiper = new Swiper(".swiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 3,
-      slideShadows: true
-    },
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2
-      },
-      768: {
-        slidesPerView: 1
-      },
-      1024: {
-        slidesPerView: 2
-      },
-      1560: {
-        slidesPerView: 3
-      }
-    }
-  });
-    </script>
   
 
 </head>
@@ -84,11 +50,11 @@ const description =
     <Header />
 
     <Splash />
+      <Service1 />
       <Services />
       <section class="hidden-on-small-br">
         <br><br><br><br><br><br><br><br>
       </section>
-      <Service1 />
 
       <Map />
 
