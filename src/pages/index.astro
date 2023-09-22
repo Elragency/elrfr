@@ -23,13 +23,13 @@ import Banner from "~/components/banner.astro";
 import { getLangFromUrl } from '~/i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 
-// import Booking from "~/components/squarebook.astro";
 import "~/styles/index.css";
+import "~/styles/animate.css";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Nous aidons les PME à prendre un virage électronique en modernisant leurs services et en automatisant leur processus. Nous créons votre présence digitale et modernisons vos procédés pour améliorer vos services.";
+  "L'Agence web pour vous! Transformez votre PME avec une conception de site internet innovante. Élevez votre présence digitale et brillez sur la rive sud de Montréal!";
 ---
 
 <!doctype html>
@@ -58,12 +58,12 @@ const description =
     
 
 
-    <title>Agence ELR | Le Meilleur Allié Des PME</title>
+    <title>Agence ELR | L'Agence Web Spécialisée Dans La Conception Web Pour PME</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
     <meta property="og:title" content="Agence ELR" />
-    <meta property="og:type" content="Consultants" />
+    <meta property="og:type" content="L'agence web pour les PMEs" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
@@ -74,7 +74,7 @@ const description =
   
     <Header />
     <Splash />
-    <section class="relative h-full">
+    <section class="relative h-full fadeIn">
       <div class="space-y-24 px-8 py-32">
         <Intro />
       </div>

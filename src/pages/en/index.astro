@@ -12,6 +12,7 @@ import About from "~/components/en/en-about2.astro";
 import LanguagePicker from '~/components/LanguagePicker.astro';
 import Testi from "~/components/en/en-testimony.astro";
 import Map from "~/components/en/en-map.astro";
+import Card from "~/components/en/en-card.astro";
 
 import { getLangFromUrl } from '~/i18n/utils';
 
@@ -21,7 +22,7 @@ import "~/styles/index.css";
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Nous aidons les PME à prendre un virage électronique en modernisant leurs services et en automatisant leur processus. Nous créons votre présence digitale et modernisons vos procédés pour améliorer vos services.";
+  "We help SMEs go electronic by modernizing their services and automating their processes. We create your digital presence by creating a website and modernize your processes to improve your services. We are the reference in web design on the south shore of Montreal.";
 ---
 
 <!doctype html>
@@ -43,16 +44,20 @@ const description =
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
     
 
-    <title>ELR Agency | Le Meilleur Allié Des PME</title>
+    <title>ELR Agency | The Web Agency Specializing in Web Design for SMEs</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
     <meta property="og:title" content="Agence ELR" />
-    <meta property="og:type" content="Consultants" />
+    <meta property="og:type" content="The Web Design Agency For Small Businesses" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <script  src="~/assets/js/burger.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
    <!-- initialize theme -->
    <!-- <script is:inline>
@@ -94,12 +99,12 @@ const description =
       </div>
       </section>
       <section class="hidden-on-small-br">
-        <br><br><br><br>
+        <br><br><br><br><br><br><br>
       </section>
       <About />
       <br><br><br><br>
       <section class="hidden-on-small-br">
-        <br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br>
+        <br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       </section>
       <Features />
       <br>
@@ -109,6 +114,7 @@ const description =
       <Portfolio />
       </div>
       <Testi />
+      <Card />
       <Map />
 
       <Footer2 />

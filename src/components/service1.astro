@@ -1,8 +1,11 @@
    ---
    import { Picture } from "@astrojs/image/components";
-   import Aboutimg from "~/assets/conception.png";
-   import Service2 from "~/assets/service2.png";
-   import Service3 from "~/assets/rocket.gif";
+   import Service1 from "~/assets/conception.png";
+   import Service2 from "~/assets/service-3.png";
+   import Service3 from "~/assets/service-03.png";
+   import Service4 from "~/assets/service-4.png";
+
+
 
    const widths = [450, 800]; // This represents the actual widths of the images
 const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width image when viewport is >= 640px and 450px width image otherwise.
@@ -40,14 +43,21 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
                          href="#contact"
                          class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
                        >
-                       En Savoir Plus
+                       Contactez-nous
                        </a>
                      </div>
                      <div class="text-center">
                         <div class="text-center">
                             <div class="relative z-10 inline-block mt-6">
-                                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-                                <lottie-player class="large-screen-lottie" src="https://lottie.host/e018006e-0105-41d1-85c0-5f87dc9e442a/H7842XIgt9.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                              <Picture
+                  class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+                  src={Service1}
+                  srcset={`${Service1} 800w`}
+                  widths={widths}
+                  sizes={sizes}
+                  loading="eager"
+                  alt="Un ordinateur avec logo de L'agence ELR"
+              />
                             </div>
                         </div>
                      </div>
@@ -72,8 +82,15 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
                         <!-- Move the image section here, before the text content -->
                         <div class="text-center">
                             <div class="relative z-10 inline-block mt-6">
-                                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-                                <lottie-player class="large-screen-lottie" src="https://lottie.host/50fa0200-55cd-4856-833e-261fb71a5fd1/fpX2x6HhAa.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                              <Picture
+                              class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+                              src={Service2}
+                              srcset={`${Service2} 800w`}
+                              widths={widths}
+                              sizes={sizes}
+                              loading="eager"
+                              alt="Un ordinateur avec logo de L'agence ELR"
+                          />
                             </div>
                         </div>
 
@@ -97,7 +114,7 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
                                 href="#contact"
                                 class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
                             >
-                                En Savoir Plus
+                                Contactez-nous
                             </a>
                         </div>
                     </div>
@@ -143,13 +160,20 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
                   </a>
                 </div>
                 <div class="text-center">
-                    <div class="text-center">
-                        <div class="relative z-10 inline-block mt-6">
-                            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-                            <lottie-player class="large-screen-lottie" src="https://lottie.host/e923caa5-27ab-4aa7-99b8-91c6376c1e7d/qj2nNNuFZV.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-                        </div>
-                    </div>
-                </div>
+                  <div class="text-center">
+                      <div class="relative z-10 inline-block mt-6">
+                        <Picture
+            class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+            src={Service3}
+            srcset={`${Service3} 800w`}
+            widths={widths}
+            sizes={sizes}
+            loading="eager"
+            alt="Un ordinateur avec logo de L'agence ELR"
+        />
+                      </div>
+                  </div>
+               </div>
               </div>
             </div>
           </div>
@@ -170,8 +194,15 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
                         <!-- Move the image section here, before the text content -->
                         <div class="text-center">
                             <div class="relative z-10 inline-block mt-6">
-                                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-                                <lottie-player class="large-screen-lottie" src="https://lottie.host/5d957972-1d82-4a73-a6fc-2ed5ec413445/IzyXgA3O7O.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                              <Picture
+                              class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+                              src={Service4}
+                              srcset={`${Service4} 800w`}
+                              widths={widths}
+                              sizes={sizes}
+                              loading="eager"
+                              alt="Un ordinateur avec logo de L'agence ELR"
+                          />
                             </div>
                         </div>
 

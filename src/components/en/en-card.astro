@@ -1,4 +1,4 @@
-<body class="relative font-inter antialiased fadeIn">
+<body class="relative font-inter antialiased">
     <main class="relative min-h-screen flex flex-col justify-center overflow-hidden" id="prix">
         <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
 
@@ -11,8 +11,8 @@
                         <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
                             <span class="absolute inset-0 w-1/2 bg-gradient-to-br from-white via-green-500 to-white; rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out" :class="isAnnual ? 'translate-x-0' : 'translate-x-full'"></span>
                         </span>
-                        <button class="relative flex flex-1 items-center justify-center px-2 text-sm font-medium rounded-md focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="isAnnual ? 'text-white' : 'text-slate-500 dark:text-slate-400'" @click="isAnnual = true" :aria-pressed="isAnnual">Annuel</button>
-                        <button class="relative flex flex-1 items-center justify-center px-2 text-sm font-medium rounded-md focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="isAnnual ? 'text-slate-500 dark:text-slate-400' : 'text-white'" @click="isAnnual = false" :aria-pressed="isAnnual">Mensuel</button>
+                        <button class="relative flex flex-1 items-center justify-center px-2 text-sm font-medium rounded-md focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="isAnnual ? 'text-white' : 'text-slate-500 dark:text-slate-400'" @click="isAnnual = true" :aria-pressed="isAnnual">Annual</button>
+                        <button class="relative flex flex-1 items-center justify-center px-2 text-sm font-medium rounded-md focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="isAnnual ? 'text-slate-500 dark:text-slate-400' : 'text-white'" @click="isAnnual = false" :aria-pressed="isAnnual">Monthly</button>
                     </div>
                 </div>
             
@@ -22,15 +22,15 @@
                     <div class="h-full hover:scale-105 transform transition-transform duration-150">                                
                         <div class="relative flex flex-col h-full p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow shadow-slate-950/5">
                             <div class="mb-5">
-                                <div class="text-slate-900 dark:text-slate-200 font-semibold mb-1">Or</div>
+                                <div class="text-slate-900 dark:text-slate-200 font-semibold mb-1">Gold</div>
                                 <div class="inline-flex items-baseline mb-2">
                                     <span class="text-slate-900 dark:text-slate-200 font-bold text-3xl">$</span>
                                     <span class="text-slate-900 dark:text-slate-200 font-bold text-4xl" x-text="isAnnual ? '49.99' : '59.99'"></span>
-                                    <span class="text-slate-500 font-medium">/mois</span>
+                                    <span class="text-slate-500 font-medium">/mo</span>
                                 </div>
-                                <div class="text-sm text-slate-500 mb-5">Parfait pour les entrepreneurs indépendants qui souhaite faciliter la vie de leur clientèle.</div>
+                                <div class="text-sm text-slate-500 mb-5">Perfect for independent entrepreneurs who want to make life easier for their customers.</div>
                                 <a class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-gradient-to-br from-white via-green-500 to-white; px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150" href="#contact">
-                                    Choisir Ce Plan
+                                    Choose This Plan
                                 </a>
                             </div>
                             <div class="text-slate-900 dark:text-slate-200 font-medium mb-3">Inclusions:</div>
@@ -39,31 +39,31 @@
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Conception Web </span>
+                                    <span>Web Conception </span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Version mobile adaptée</span>
+                                    <span>Adapted mobile version</span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>2 Pages Incluses</span>
+                                    <span>2 Pages Included</span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Intégration Calendly</span>
+                                    <span>Calendly Integration </span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Formulaire de contact avec réponses automatisées</span>
+                                    <span>Contact form with automated responses</span>
                                 </li>
                             </ul>
                         </div>
@@ -76,15 +76,15 @@
                                 <div class="inline-flex items-center text-xs font-semibold py-1.5 px-3 bg-emerald-500 text-white rounded-full shadow-sm shadow-slate-950/5">Plus Populaire</div>
                             </div>
                             <div class="mb-5">
-                                <div class="text-slate-900 dark:text-slate-200 font-semibold mb-1">Diamant</div>
+                                <div class="text-slate-900 dark:text-slate-200 font-semibold mb-1">Diamond</div>
                                 <div class="inline-flex items-baseline mb-2">
                                     <span class="text-slate-900 dark:text-slate-200 font-bold text-3xl">$</span>
                                     <span class="text-slate-900 dark:text-slate-200 font-bold text-4xl" x-text="isAnnual ? '99.99' : '119.99'"></span>
-                                    <span class="text-slate-500 font-medium">/mois</span>
+                                    <span class="text-slate-500 font-medium">/mo</span>
                                 </div>
                                 <div class="text-sm text-slate-500 mb-5">Vous êtes un entrepreneur qui construit son projet et souhaite grossir ? Ce plan est pour vous.</div>
                                 <a class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-gradient-to-br from-white via-green-500 to-white; px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150" href="#contact">
-                                    Choisir Ce Plan
+                                    Choose This Plan
                                 </a>
                             </div>
                             <div class="text-slate-900 dark:text-slate-200 font-medium mb-3">Inclusions:</div>
@@ -93,31 +93,31 @@
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Tout ce qui est dans l'Essentiel</span>
+                                    <span>Everything in the Essential</span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>4 Pages au total</span>
+                                    <span>4 Pages total</span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Site Bilingue (Traduction à l'internet) </span>
+                                    <span>Bilingual Site (Intern translation) </span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>8 heures de modification par année </span>
+                                    <span>8 hours of modification per year </span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Rapport de performance mensuel</span>
+                                    <span>Monthly performance report</span>
                                 </li>
                             </ul>
                         </div>
@@ -127,15 +127,15 @@
                     <div class="h-full hover:scale-105 transform transition-transform duration-150">
                         <div class="relative flex flex-col h-full p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow shadow-slate-950/5">
                             <div class="mb-5">
-                                <div class="text-slate-900 dark:text-slate-200 font-semibold mb-1">Emeraude</div>
+                                <div class="text-slate-900 dark:text-slate-200 font-semibold mb-1">Emerald</div>
                                 <div class="inline-flex items-baseline mb-2">
                                     <span class="text-slate-900 dark:text-slate-200 font-bold text-3xl">$</span>
                                     <span class="text-slate-900 dark:text-slate-200 font-bold text-4xl" x-text="isAnnual ? '199.99' : '239.99'"></span>
                                     <span class="text-slate-500 font-medium">/mo</span>
                                 </div>
-                                <div class="text-sm text-slate-500 mb-5">Vous êtes déjà bien établit et n'êtes pas satisfait de votre site actuel ? Changeons cela.</div>
+                                <div class="text-sm text-slate-500 mb-5">Are you already well established and not satisfied with your current site? Let's change that.</div>
                                 <a class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-gradient-to-br from-white via-green-500 to-white; px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150" href="#contact">
-                                    Choisir Ce Plan
+                                    Choose This Plan
                                 </a>
                             </div>
                             <div class="text-slate-900 dark:text-slate-200 font-medium mb-3">Inclusions:</div>
@@ -144,37 +144,37 @@
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Tout ce qui est dans le Performant</span>
+                                    <span>Everything in the Performance</span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>8 Pages au total</span>
+                                    <span>8 Pages Total</span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Services TI</span>
+                                    <span>IT Services</span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Ajout d'automatisation des procédés</span>
+                                    <span>Addition of Process Automation</span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Optimisations mensuelle</span>
+                                    <span>Monthly optimizations</span>
                                 </li>
                                 <li class="flex items-center">
                                     <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                                     </svg>
-                                    <span>Mise en place de stratégie de contenue</span>
+                                    <span>Implementation of content strategy</span>
                                 </li>
                             </ul>
                         </div>
