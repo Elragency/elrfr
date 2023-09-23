@@ -16,6 +16,7 @@ import Card from "~/components/card.astro";
 import Pricing from "~/components/Pricing.astro";
 import About from "~/components/about2.astro";
 import Banner from "~/components/banner.astro";
+import App from "~/components/app.astro";
 
 
 
@@ -100,11 +101,11 @@ const description =
   
     <Header />
     <Splash />
-    <section class="relative h-full fadeIn">
+    <!-- <section class="relative h-full fadeIn">
       <div class="space-y-24 px-8 py-32">
         <Intro />
       </div>
-      </section>
+      </section> -->
       <section class="hidden-on-small-br">
         <br><br><br>
       </section>
@@ -128,6 +129,7 @@ const description =
       <Testi />
       <Card />
       </div>
+      <!-- <App /> -->
       <Map />
 
       <Footer2 />
@@ -208,7 +210,7 @@ const description =
       
       
   </body>
-  
+
   <script>
     var chatbox = document.getElementById('fb-customer-chat');
     chatbox.setAttribute("page_id", "124268020765768");
@@ -232,6 +234,7 @@ const description =
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
+  
 
 </html>
 
