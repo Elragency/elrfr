@@ -48,12 +48,34 @@ const description =
     <meta name="generator" content={generator} />
     <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'> -->
 
+       <!-- initialize theme -->
+   <script is:inline>
+    const themeSaved = localStorage.getItem("theme");
+
+    if (themeSaved) {
+      document.documentElement.dataset.theme = themeSaved;
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+    }
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        if (!localStorage.getItem("theme")) {
+          document.documentElement.dataset.theme = event.matches
+            ? "dark"
+            : "light";
+        }
+      });
+      
+  </script>
+
     <script  src="~/assets/js/burger.js"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-    
-
 
     <title>Agence ELR | L'Agence Web Spécialisée Dans La Conception Web Pour PME</title>
     <meta name="description" content={description} />
@@ -96,6 +118,15 @@ const description =
       <Map />
 
       <Footer2 />
+
+      <noscript>
+        <style>
+          #splash-bg-fallback {
+            display: block;
+          }
+         
+        </style>
+      </noscript>
       <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script> -->
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
