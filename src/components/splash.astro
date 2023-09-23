@@ -7,6 +7,9 @@ import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 import Backgroundimage from "~/assets/backgroundv3.png";
 
+import "~/styles/index.css";
+
+
 
 const widths = [450, 800]; // This represents the actual widths of the images
 const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width image when viewport is >= 640px and 450px width image otherwise.
@@ -66,6 +69,7 @@ const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width
     #splash-bg-fallback {
       display: block;
     }
+   
   </style>
 </noscript>
 
