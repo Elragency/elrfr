@@ -103,17 +103,68 @@ const description =
       <Map />
 
       <Footer2 />
-
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+      <script>
+        const tableWrapper = document.querySelector(".table-wrapper");
+        const switchInputs = document.querySelectorAll(".switch-wrapper input");
+        const prices = tableWrapper.querySelectorAll(".price");
+        const toggleClass = "hide";
 
-
-      <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script> -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
-      <!-- <script src="~/assets/js/script3.js"></script> -->
-
-
-      <script src="~/assets/js/banner.js"></script>
-
+        for (const switchInput of switchInputs) {
+          switchInput.addEventListener("input", function () {
+            for (const price of prices) {
+              price.classList.add(toggleClass);
+            }
+            const activePrices = tableWrapper.querySelectorAll(
+            `.price.${switchInput.id}`
+            );
+            for (const activePrice of activePrices) {
+              activePrice.classList.remove(toggleClass);
+            }
+          });
+        }
+      </script>
+      <script>
+        import MicroModal from "micromodal";
+        import invariant from "tiny-invariant";
+      
+        const menuModalId = "menu-modal";
+      
+        const header = document.querySelector("#page-header") as HTMLElement;
+        const page = document.documentElement;
+        const menu = document.querySelector(`#${menuModalId} ul`);
+        const openNavButton = document.querySelector("#open-nav-button");
+        const closeNavButton = document.querySelector("#close-nav-button");
+      
+        invariant(header, "header should not be null");
+        invariant(menu, "menu should not be null");
+        invariant(openNavButton, "openNavButton should not be null");
+        invariant(closeNavButton, "closeNavButton should not be null");
+      
+        const openMenu = () => {
+          MicroModal.show(menuModalId, { disableScroll: true });
+        };
+      
+        const closeMenu = () => {
+          MicroModal.close(menuModalId);
+        };
+      
+        openNavButton.addEventListener("click", openMenu);
+        closeNavButton.addEventListener("click", closeMenu);
+      
+        document.addEventListener("scroll", () => {
+          const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+          header.classList.toggle("fixed-header", d < 0);
+        });
+      
+        menu.addEventListener("click", (event) => {
+          if ((event.target as HTMLElement).tagName === "A") {
+            closeMenu();
+          }
+        });
+      </script>
       
   </body>
 </html>
