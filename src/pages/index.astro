@@ -1,5 +1,5 @@
 ---
-// import "@fontsource-variable/inter";
+import "@fontsource-variable/inter";
 // import "~/assets/js/script3";
 
 import Propos from "~/components/propos.astro";
@@ -68,7 +68,7 @@ const description =
     <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
-    
+
    <!-- initialize theme -->
    <script is:inline>
     const themeSaved = localStorage.getItem("theme");
@@ -82,18 +82,6 @@ const description =
       document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
     }
 
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (event) => {
-        if (!localStorage.getItem("theme")) {
-          document.documentElement.dataset.theme = event.matches
-            ? "dark"
-            : "light";
-        }
-      });
-      setTimeout(function() {
-      window.location.href = "/"; // Replace with the URL of your main page
-    }, 3000); // 2000 milliseconds = 2 seconds
   </script>
 
 </head>
