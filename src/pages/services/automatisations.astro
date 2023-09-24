@@ -1,0 +1,236 @@
+---
+import "@fontsource-variable/inter";
+import Propos from "~/components/propos.astro";
+import Features from "~/components/features.astro";
+import Footer2 from "~/components/footer4.astro";
+import Header from "~/components/header.astro";
+import Elrintro from "~/components/elrintro.astro";
+import Portfolio from "~/components/portfolio.astro";
+import Splash from "~/components/splash-auto.astro";
+import Contact from "~/components/contact2.astro";
+import Cards from "~/components/cards.astro";
+import Pricing from "~/components/Pricing.astro";
+import About from "~/components/about-services.astro";
+import About2 from "~/components/about.astro";
+import Elrpropos from "~/components/elrpropos.astro";
+import { Picture } from "@astrojs/image/components";
+import Services1 from "~/assets/about-image.png";
+import Faq from "~/components/elrfaq.astro";
+import Map from "~/components/map.astro";
+
+
+
+const widths = [450, 800]; // This represents the actual widths of the images
+const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width image when viewport is >= 640px and 450px width image otherwise.
+
+
+
+import { getLangFromUrl } from '~/i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+
+// import Booking from "~/components/squarebook.astro";
+import "~/styles/index.css";
+
+const { generator, site } = Astro;
+const image = new URL("social.jpg", site);
+const description =
+  "Apprenez à connaitre l'Agence ELR, l'agence en charge du développement des PMEs au Québec.";
+---
+
+<!doctype html>
+<html lang={lang} class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TPW94QBF');</script>
+  <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+    <script  src="~/assets/js/burger.js"></script>
+
+    <title>Agence ELR | Conception Web Pour Entrepreneurs</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta property="og:title" content="Agence ELR" />
+    <meta property="og:type" content="Consultants" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+   <!-- initialize theme -->
+
+</head>
+  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
+    <Header />
+    <Splash />
+    <About />
+    <section class="hidden-on-small-br">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
+    </section>
+    <About2 />
+      <section class="hidden-on-small-br">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br> <br><br>
+      </section>
+
+      <!-- ====== About Section Start -->
+<section
+id="about"
+class=" lg:pb-[120px]"
+>
+<div class="margin-box">
+  <div class="">
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4">
+        <div
+          class="items-center justify-between overflow-hidden border lg:flex"
+        >
+          <div
+            class="w-full px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 xl:max-w-[640px] "
+          >
+            <span
+              class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
+            >
+              Distinction
+            </span>
+            <h2
+              class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
+            >
+              Comprenez vos clients
+            </h2>
+            <p class="mb-9 text-base leading-relaxed text-body-color">
+              En plus de concevoir un site web fonctionnel, nous sommes en mesure d'ajouter des fonctionnalités qui vous permettent de savoir qui sont vos clients, ou ils sont en plus
+              de savoir combien de personnes cliquent sur le bouton pour appeler votre compagnie à partir de votre site web.
+            </p>
+            <p class="mb-9 text-base leading-relaxed text-body-color">
+              Nous effectuons cela à l'aide des outils Google Anlytics jumelés à Google tag manager et vous pouvez visualiser le tableau pour comprendre les données grâce à Google Visual Data Studio.
+            </p>
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
+            >
+              Débutez Aujourd'hui!
+            </a>
+          </div>
+          <div class="text-center">
+            <div class="relative z-10 inline-block">
+               <Picture
+                     class="mx-auto lg:ml-auto"
+                     src={Services1}
+                     srcset={`${Services1}`}
+                     widths={widths}
+                     sizes={sizes}
+                     loading="eager"
+                     alt="A propos de nous"
+                 />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- ====== About Section End -->
+      <section class="hidden-on-small-br">
+        <br><br><br><br>
+      </section>
+
+      <!-- <Faq /> -->
+      <!-- <br><br> -->
+      <section class="hidden-on-small-br">
+        <br><br><br><br><br><br>
+      </section>
+      <!-- <Contact /> -->
+      <Map />
+      <Footer2 />
+      
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+      <script>
+        const tableWrapper = document.querySelector(".table-wrapper");
+const switchInputs = document.querySelectorAll(".switch-wrapper input");
+const prices = tableWrapper.querySelectorAll(".price");
+const toggleClass = "hide";
+
+for (const switchInput of switchInputs) {
+  switchInput.addEventListener("input", function () {
+    for (const price of prices) {
+      price.classList.add(toggleClass);
+    }
+    const activePrices = tableWrapper.querySelectorAll(
+      `.price.${switchInput.id}`
+    );
+    for (const activePrice of activePrices) {
+      activePrice.classList.remove(toggleClass);
+    }
+  });
+}
+        // AOS.init();
+      </script>
+      <script>
+        import MicroModal from "micromodal";
+        import invariant from "tiny-invariant";
+      
+        const menuModalId = "menu-modal";
+      
+        const header = document.querySelector("#page-header") as HTMLElement;
+        const page = document.documentElement;
+        const menu = document.querySelector(`#${menuModalId} ul`);
+        const openNavButton = document.querySelector("#open-nav-button");
+        const closeNavButton = document.querySelector("#close-nav-button");
+      
+        invariant(header, "header should not be null");
+        invariant(menu, "menu should not be null");
+        invariant(openNavButton, "openNavButton should not be null");
+        invariant(closeNavButton, "closeNavButton should not be null");
+      
+        const openMenu = () => {
+          MicroModal.show(menuModalId, { disableScroll: true });
+        };
+      
+        const closeMenu = () => {
+          MicroModal.close(menuModalId);
+        };
+      
+        openNavButton.addEventListener("click", openMenu);
+        closeNavButton.addEventListener("click", closeMenu);
+      
+        document.addEventListener("scroll", () => {
+          const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+          header.classList.toggle("fixed-header", d < 0);
+        });
+      
+        menu.addEventListener("click", (event) => {
+          if ((event.target as HTMLElement).tagName === "A") {
+            closeMenu();
+          }
+        });
+      </script>
+  </body>
+</html>
+
+<style>
+  .hidden-on-small-br {
+    display: none;
+  }
+
+  /* Using media query to show it only on small screens (below 768px in this example) */
+  @media screen and (max-width: 768px) {
+    .hidden-on-small-br {
+      display: block; /* Or inline, inline-block, flex, etc., depending on your layout needs */
+    }
+  }
+  .margin-box {
+    margin: 20px;
+  }
+  
+</style>
