@@ -110,7 +110,10 @@ const description =
         <br><br><br>
       </section>
       <About />
-      <br><br><br><br>
+      <!-- <br><br><br> -->
+      <section class="hidden-on-md-br">
+        <br><br><br><br><br> <br><br><br><br><br>
+      </section>
       <section class="hidden-on-small-br">
         <br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
       </section>
@@ -127,7 +130,7 @@ const description =
 
       <Portfolio />
       <Testi />
-      <Card />
+      <!-- <Card /> -->
       </div>
       <!-- <App /> -->
       <Map />
@@ -221,6 +224,13 @@ const description =
   /* Using media query to show it only on small screens (below 768px in this example) */
   @media screen and (max-width: 767px) {
     .hidden-on-small-br {
+      display: block; /* Or inline, inline-block, flex, etc., depending on your layout needs */
+    }
+  }
+
+    /* Using media query to show it only on small screens (below 768px in this example) */
+    @media screen and (min-width: 768px) and (max-width: 987px) {
+    .hidden-on-md-br {
       display: block; /* Or inline, inline-block, flex, etc., depending on your layout needs */
     }
   }
