@@ -1,0 +1,484 @@
+---
+import "@fontsource-variable/inter";
+import Propos from "~/components/propos.astro";
+import Features from "~/components/features.astro";
+import Footer2 from "~/components/footer4.astro";
+import Header from "~/components/header.astro";
+import Elrintro from "~/components/elrintro.astro";
+import Portfolio from "~/components/portfolio.astro";
+import Splash from "~/components/splash-web.astro";
+import Contact from "~/components/contact2.astro";
+import Cards from "~/components/cards.astro";
+import Pricing from "~/components/Pricing.astro";
+import About from "~/components/about-services.astro";
+import About2 from "~/components/about.astro";
+import Elrpropos from "~/components/elrpropos.astro";
+import { Picture } from "@astrojs/image/components";
+import Services1 from "~/assets/about-image.png";
+import Faq from "~/components/elrfaq.astro";
+import Map from "~/components/map.astro";
+import Starfield from "~/components/starfield.astro";
+
+
+
+const widths = [450, 800]; // This represents the actual widths of the images
+const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width image when viewport is >= 640px and 450px width image otherwise.
+
+
+
+import { getLangFromUrl } from '~/i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+
+// import Booking from "~/components/squarebook.astro";
+import "~/styles/index.css";
+
+const { generator, site } = Astro;
+const image = new URL("social.jpg", site);
+const description =
+  "Apprenez à connaitre l'Agence ELR, l'agence en charge du développement des PMEs au Québec.";
+---
+
+<!doctype html>
+<html lang={lang} class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TPW94QBF');</script>
+  <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+    <script  src="~/assets/js/burger.js"></script>
+
+    <title>Agence ELR | Conception Web Pour Entrepreneurs</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta property="og:title" content="Agence ELR" />
+    <meta property="og:type" content="Consultants" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+   <!-- initialize theme -->
+
+</head>
+  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
+    <Header />
+    <section class="relative h-full bg-black h-screen">
+      <Starfield />
+      <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
+          <!-- <HeroImage /> -->
+      </div>
+    
+      <!-- Container for Agency text, Picture, and Button -->
+      <div class="relative grid h-full place-items-center sm:grid-cols-1"> <!-- Ensure this container takes up the full height of its parent -->
+    
+          <!-- Background Text: ELR and Agency for mobile -->
+          <div class="flex flex-col items-center justify-center z-10 space-y-4 sm:hidden h-screen" > <!-- sm:hidden ensures it's only shown on small screens -->
+            <div class="gradient-text text-center font-extrabold tracking-tighter urmom-services text-8vw">Conception</div>
+            <div class="gradient-text text-center font-extrabold tracking-tighter urmom-services text-20vw">Web</div>
+        </div>
+    
+          <!-- Background Text: Agency for larger screens -->
+          <div class="smally background-text-elr2 gradient-text text-center font-extrabold tracking-tighter urmom absolute inset-0 flex items-center justify-center w-screen h-screen text-bbb z-0 big-hidden sm:flex sm:items-center">
+           Système&nbsp;CRM
+        </div>
+    
+          <!-- Picture and Button -->
+          <div class="flex flex-col items-center justify-center z-10 space-y-4 marginal sm:mt-0">
+    
+              <div class="background-text-container relative w-full sm:hidden" id="astronaut">
+                <div
+                id="astronaut"
+                class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
+              >
+                <!-- <Picture
+                  class="h-full w-full object-cover"
+                  src={astronautImage}
+                  widths={widths}
+                  sizes={sizes}
+                  loading="eager"
+                  alt="A floating astronaut in a space suit"
+                /> -->
+              </div>
+    
+              </div>
+          </div>
+      </div>
+    </section>
+    <section class="p-16 absolut grid h-full">
+      <!-- ====== Features Section Start -->
+  <section class=" pb-8 lg:pt-[120px] lg:pb-[70px]">
+    <div class="container">
+      <div class="-mx-4 flex flex-wrap">
+        <div class="w-full px-4">
+          <div class="mb-12 lg:mb-20">
+            <h2
+              class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
+            >
+              Améliorer l'expérience de vos clients
+            </h2>
+            <p
+              class="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed"
+            >
+              Permettez-nous de mettre en place vos processus d'affaires pour vous faire sauver du temps
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="-mx-4 flex flex-wrap">
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div
+            class="wow fadeInUp group mb-12 bgg-color"
+            data-wow-delay=".15s"
+          >
+            <div
+              class="relative z-10 mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary"
+            >
+              <span
+                class="absolute top-0 left-0 z-[-1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-2xl bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"
+              ></span>
+              <svg
+                width="35"
+                height="35"
+                viewBox="0 0 52 52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M49.8062 23.3187L43.875 17.3875C43.3063 16.8187 42.4125 16.8187 41.8438 17.3875C41.275 17.9562 41.275 18.85 41.8438 19.4187L46.9625 24.6187H27.4625V4.87498L32.5812 10.075C33.15 10.6437 34.0437 10.6437 34.6125 10.075C35.1812 9.50623 35.1812 8.61248 34.6125 8.04373L28.6812 2.11248C27.95 1.38123 26.975 0.974976 26 0.974976C24.9438 0.974976 24.05 1.38123 23.3188 2.11248L17.3875 8.04373C16.8187 8.61248 16.8187 9.50623 17.3875 10.075C17.6312 10.3187 18.0375 10.4812 18.3625 10.4812C18.6875 10.4812 19.0937 10.3187 19.3375 10.075L24.6187 4.87498V24.5375H4.95625L10.075 19.3375C10.6437 18.7687 10.6437 17.875 10.075 17.3062C9.50625 16.7375 8.6125 16.7375 8.04375 17.3062L2.1125 23.2375C0.65 24.7 0.65 27.1375 2.1125 28.6L8.04375 34.5312C8.2875 34.775 8.69375 34.9375 9.01875 34.9375C9.34375 34.9375 9.75 34.775 9.99375 34.5312C10.5625 33.9625 10.5625 33.0687 9.99375 32.5L4.79375 27.3H24.4563V47.125L19.2563 41.925C18.6875 41.3562 17.7938 41.3562 17.225 41.925C16.6563 42.4937 16.6563 43.3875 17.225 43.9562L23.1562 49.8875C23.8875 50.6187 24.8625 51.025 25.8375 51.025C26.8937 51.025 27.7875 50.6187 28.5187 49.8875L34.45 43.9562C35.0188 43.3875 35.0188 42.4937 34.45 41.925C33.8813 41.3562 32.9875 41.3562 32.4188 41.925L27.4625 47.125V27.3812H47.0438L41.8438 32.5812C41.275 33.15 41.275 34.0437 41.8438 34.6125C42.0875 34.8562 42.4938 35.0187 42.8188 35.0187C43.1438 35.0187 43.55 34.8562 43.7938 34.6125L49.725 28.6812C51.2688 27.2187 51.2687 24.7812 49.8062 23.3187Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <h4 class="mb-3 text-xl font-bold text-dark">
+              Site Web
+            </h4>
+            <p class="mb-8 text-body-color lg:mb-11">
+              Nous mettons sur pied un site web fonctionnel
+            </p>
+          </div>
+        </div>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+          <div class="wow fadeInUp group mb-12 bgg-color" data-wow-delay=".2s">
+            <div
+              class="relative z-10 mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary"
+            >
+              <span
+                class="absolute top-0 left-0 z-[-1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-2xl bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"
+              ></span>
+              <svg
+                width="35"
+                height="35"
+                viewBox="0 0 35 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.7734 14.3281H3.82813C2.07813 14.3281 0.65625 12.9062 0.65625 11.1562V4.21094C0.65625 2.46094 2.07813 1.03906 3.82813 1.03906H10.7734C12.5234 1.03906 13.9453 2.46094 13.9453 4.21094V11.1562C13.9453 12.9062 12.5234 14.3281 10.7734 14.3281ZM3.82813 2.95312C3.17188 2.95312 2.57031 3.5 2.57031 4.21094V11.1562C2.57031 11.8125 3.11719 12.4141 3.82813 12.4141H10.7734C11.4297 12.4141 12.0313 11.8672 12.0313 11.1562V4.21094C12.0313 3.55469 11.4844 2.95312 10.7734 2.95312H3.82813Z"
+                  fill="white"
+                />
+                <path
+                  d="M31.1719 14.3281H24.2266C22.4766 14.3281 21.0547 12.9062 21.0547 11.1562V4.21094C21.0547 2.46094 22.4766 1.03906 24.2266 1.03906H31.1719C32.9219 1.03906 34.3438 2.46094 34.3438 4.21094V11.1562C34.3438 12.9062 32.9219 14.3281 31.1719 14.3281ZM24.2266 2.95312C23.5703 2.95312 22.9688 3.5 22.9688 4.21094V11.1562C22.9688 11.8125 23.5156 12.4141 24.2266 12.4141H31.1719C31.8281 12.4141 32.4297 11.8672 32.4297 11.1562V4.21094C32.4297 3.55469 31.8828 2.95312 31.1719 2.95312H24.2266Z"
+                  fill="white"
+                />
+                <path
+                  d="M10.7734 33.9609H3.82813C2.07813 33.9609 0.65625 32.5391 0.65625 30.7891V23.8438C0.65625 22.0938 2.07813 20.6719 3.82813 20.6719H10.7734C12.5234 20.6719 13.9453 22.0938 13.9453 23.8438V30.7891C13.9453 32.5391 12.5234 33.9609 10.7734 33.9609ZM3.82813 22.5859C3.17188 22.5859 2.57031 23.1328 2.57031 23.8438V30.7891C2.57031 31.4453 3.11719 32.0469 3.82813 32.0469H10.7734C11.4297 32.0469 12.0313 31.5 12.0313 30.7891V23.8438C12.0313 23.1875 11.4844 22.5859 10.7734 22.5859H3.82813Z"
+                  fill="white"
+                />
+                <path
+                  d="M31.1719 33.9609H24.2266C22.4766 33.9609 21.0547 32.5391 21.0547 30.7891V23.8438C21.0547 22.0938 22.4766 20.6719 24.2266 20.6719H31.1719C32.9219 20.6719 34.3438 22.0938 34.3438 23.8438V30.7891C34.3438 32.5391 32.9219 33.9609 31.1719 33.9609ZM24.2266 22.5859C23.5703 22.5859 22.9688 23.1328 22.9688 23.8438V30.7891C22.9688 31.4453 23.5156 32.0469 24.2266 32.0469H31.1719C31.8281 32.0469 32.4297 31.5 32.4297 30.7891V23.8438C32.4297 23.1875 31.8828 22.5859 31.1719 22.5859H24.2266Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <h4 class="mb-3 text-xl font-bold text-dark">
+              Système CRM
+            </h4>
+            <p class="mb-8 text-body-color lg:mb-11">
+              Nous intégrons la plateforme Odoo
+            </p>
+          </div>
+        </div>
+        <div class="w-full px-4 md:w-full lg:w-1/3">
+          <div
+            class="wow fadeInUp group mb-12 bgg-color"
+            data-wow-delay=".25s"
+          >
+            <div
+              class="relative z-10 mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary"
+            >
+              <span
+                class="absolute top-0 left-0 z-[-1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-2xl bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"
+              ></span>
+              <svg
+                width="35"
+                height="35"
+                viewBox="0 0 35 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29.5312 21.6562L28.6563 21.1641L29.6953 20.5625C30.7344 19.9062 31.3359 18.8125 31.2812 17.6094C31.2266 16.4063 30.625 15.3125 29.5312 14.7109L27.8906 13.7813L29.6406 12.6875C30.6797 12.0313 31.2812 10.9375 31.2266 9.73438C31.1719 8.53125 30.5703 7.4375 29.4766 6.83594L19.25 1.09375C18.2109 0.492187 16.9531 0.546875 15.9141 1.09375L5.41406 7.21875C4.375 7.82031 3.71875 8.91406 3.71875 10.1172C3.71875 11.3203 4.375 12.4141 5.41406 13.0156L7.10938 14L5.41406 14.9844C4.375 15.5859 3.71875 16.6797 3.71875 17.8828C3.71875 19.0859 4.32031 20.1797 5.41406 20.7812L6.39844 21.3281L5.46875 21.875C4.42969 22.4766 3.77344 23.5703 3.77344 24.7734C3.77344 25.9766 4.375 27.0703 5.46875 27.6719L15.9141 33.6875C16.4609 34.0156 17.0078 34.125 17.6094 34.125C18.2109 34.125 18.8125 33.9609 19.3594 33.6328L29.6953 27.2891C30.7344 26.6328 31.3359 25.5391 31.2812 24.3359C31.2266 23.2969 30.625 22.2031 29.5312 21.6562ZM5.63281 10.1172C5.63281 9.57031 5.90625 9.13281 6.34375 8.85938L16.8438 2.78906C17.0625 2.67969 17.3359 2.57031 17.5547 2.57031C17.7734 2.57031 18.0469 2.625 18.2656 2.73437L28.5469 8.47656C28.9844 8.75 29.2578 9.1875 29.3125 9.73438C29.3125 10.2812 29.0391 10.7188 28.6016 10.9922L18.3203 17.3906C17.8828 17.6641 17.2812 17.6641 16.8438 17.3906L6.39844 11.375C5.90625 11.1562 5.63281 10.6641 5.63281 10.1172ZM5.63281 17.9375C5.63281 17.3906 5.90625 16.9531 6.34375 16.6797L9.02344 15.1484L15.8594 19.0859C16.4062 19.4141 16.9531 19.5234 17.5547 19.5234C18.1562 19.5234 18.7578 19.3594 19.3047 19.0312L26.0312 14.875L28.6016 16.2969C29.0391 16.5703 29.3125 17.0078 29.3672 17.5547C29.3672 18.1016 29.0938 18.5391 28.6563 18.8125L18.3203 25.2656C17.8828 25.5391 17.2812 25.5391 16.8438 25.2656L6.39844 19.25C5.90625 18.9766 5.63281 18.4844 5.63281 17.9375ZM28.6563 25.8125L18.3203 32.2109C17.8828 32.4844 17.2812 32.4844 16.8438 32.2109L6.39844 26.1953C5.96094 25.9219 5.6875 25.4844 5.6875 24.9375C5.6875 24.3906 5.96094 23.9531 6.39844 23.6797L8.3125 22.5859L15.8594 26.9609C16.4062 27.2891 16.9531 27.3984 17.5547 27.3984C18.1562 27.3984 18.7578 27.2344 19.3047 26.9062L26.7969 22.2578L28.6563 23.2969C29.0938 23.5703 29.3672 24.0078 29.4219 24.5547C29.3672 25.0469 29.0938 25.5391 28.6563 25.8125Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <h4 class="mb-3 text-xl font-bold text-dark">
+              Intégrations
+            </h4>
+            <p class="mb-8 text-body-color lg:mb-11">
+              Peu importe ce que vous avez besoin
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ====== Features Section End -->
+  </section>
+
+  
+  <style>
+    .bgg-color {
+        background-color: black;
+    }
+  </style>
+    <section class="hidden-on-small-br">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br>  
+    </section>
+    
+    <section class="px-16 absolut grid h-full">
+      <section class="">
+          <!-- <section class="marginnnn p-4"> -->
+              <div class="container-xxl ">
+                  <div class="container">
+                      <div class="row g-5">
+                          <div class="col-lg-6">
+                              <h1 class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"><span class="tmb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]">ELR Agency</span> Est Le Meilleur Allié des PME</h1>
+                              <p class="mb-4">Notre but est de vous fournir tous les outils nécessaires pour vous permettre <span class="text-primary">de passer au niveau supérieur</span> sans complications.</p>
+                              <div class="row g-4 mb-3 pb-3">
+                                  <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                                      <div class="d-flex">
+                                          <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                              <!-- <span class="fw-bold text-secondary">01</span> -->
+                                          </div>
+                                          <div class="ps-3">
+                                              <h6 class="fw-bold text-base leading-relaxed text-secondary"><b>Création de Site Web Sur-Mesure :</b></h6>
+                                              <span class="mb-9 text-base leading-relaxed text-body-color">Nous concevons des sites Web professionnels et 
+                                                faciles à utiliser, conçus pour capturer l'essence de votre entreprise et canaliser les interactions des clients directement vers vous.</span>
+                                                <div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                      <div class="d-flex">
+                                          <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                              <!-- <span class="fw-bold text-secondary">02</span> -->
+                                          </div>
+                                          <div class="ps-3">
+                                              <h6 class="fw-bold text-secondary"><b>Solutions de Facturation Automatisées :</b></h6>
+                                              <span>Mettez en place un système de facturation efficace lié à votre CRM, 
+                                                qui gère sans effort les devis, les factures et les paiements, vous offrant une vue d'ensemble financière avec un minimum d'intervention.</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                      <div class="d-flex">
+                                          <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                              <!-- <span class="fw-bold text-secondary">03</span> -->
+                                          </div>
+                                          <div class="ps-3">
+                                              <h6 class="fw-bold text-secondary"><b>Notre promesse est de numériser et d'automatiser votre processus client, vous permettant de récupérer un temps précieux. 
+                                                Concentrez-vous sur ce que vous faites de mieux – votre travail, votre passion, votre croissance d'affaires – pendant que nous construisons les bases de votre succès.</b></h6>
+                                          
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div><br>
+                              <a href="#contact" class="btn btn-primary">Débutez Maintenant<i class="fa fa-arrow-right ms-3"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+      <section class="hidden-on-small-br">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br> <br><br>
+      </section>
+
+      <!-- ====== About Section Start -->
+<!-- <section
+id="about"
+class=" lg:pb-[120px]"
+>
+<div class="margin-box">
+  <div class="">
+    <div class="-mx-4 flex flex-wrap">
+      <div class="w-full px-4">
+        <div
+          class="items-center justify-between overflow-hidden border lg:flex"
+        >
+          <div
+            class="w-full px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 xl:max-w-[640px] "
+          >
+            <span
+              class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
+            >
+              Distinction
+            </span>
+            <h2
+              class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
+            >
+              Comprenez vos clients
+            </h2>
+            <p class="mb-9 text-base leading-relaxed text-body-color">
+              En plus de concevoir un site web fonctionnel, nous sommes en mesure d'ajouter des fonctionnalités qui vous permettent de savoir qui sont vos clients, ou ils sont en plus
+              de savoir combien de personnes cliquent sur le bouton pour appeler votre compagnie à partir de votre site web.
+            </p>
+            <p class="mb-9 text-base leading-relaxed text-body-color">
+              Nous effectuons cela à l'aide des outils Google Anlytics jumelés à Google tag manager et vous pouvez visualiser le tableau pour comprendre les données grâce à Google Visual Data Studio.
+            </p>
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
+            >
+              Débutez Aujourd'hui!
+            </a>
+          </div>
+          <div class="text-center">
+            <div class="relative z-10 inline-block">
+               <Picture
+                     class="mx-auto lg:ml-auto"
+                     src={Services1}
+                     srcset={`${Services1}`}
+                     widths={widths}
+                     sizes={sizes}
+                     loading="eager"
+                     alt="A propos de nous"
+                 />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section> -->
+<!-- ====== About Section End -->
+      <section class="hidden-on-small-br">
+        <br><br><br><br>
+      </section>
+
+      <!-- <Faq /> -->
+      <!-- <br><br> -->
+      <section class="hidden-on-small-br">
+        <br><br><br><br><br><br>
+      </section>
+      <!-- <Contact /> -->
+      <Map />
+      <Footer2 />
+      
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+      <script>
+        const tableWrapper = document.querySelector(".table-wrapper");
+const switchInputs = document.querySelectorAll(".switch-wrapper input");
+const prices = tableWrapper.querySelectorAll(".price");
+const toggleClass = "hide";
+
+for (const switchInput of switchInputs) {
+  switchInput.addEventListener("input", function () {
+    for (const price of prices) {
+      price.classList.add(toggleClass);
+    }
+    const activePrices = tableWrapper.querySelectorAll(
+      `.price.${switchInput.id}`
+    );
+    for (const activePrice of activePrices) {
+      activePrice.classList.remove(toggleClass);
+    }
+  });
+}
+        // AOS.init();
+      </script>
+      <script>
+        import MicroModal from "micromodal";
+        import invariant from "tiny-invariant";
+      
+        const menuModalId = "menu-modal";
+      
+        const header = document.querySelector("#page-header") as HTMLElement;
+        const page = document.documentElement;
+        const menu = document.querySelector(`#${menuModalId} ul`);
+        const openNavButton = document.querySelector("#open-nav-button");
+        const closeNavButton = document.querySelector("#close-nav-button");
+      
+        invariant(header, "header should not be null");
+        invariant(menu, "menu should not be null");
+        invariant(openNavButton, "openNavButton should not be null");
+        invariant(closeNavButton, "closeNavButton should not be null");
+      
+        const openMenu = () => {
+          MicroModal.show(menuModalId, { disableScroll: true });
+        };
+      
+        const closeMenu = () => {
+          MicroModal.close(menuModalId);
+        };
+      
+        openNavButton.addEventListener("click", openMenu);
+        closeNavButton.addEventListener("click", closeMenu);
+      
+        document.addEventListener("scroll", () => {
+          const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+          header.classList.toggle("fixed-header", d < 0);
+        });
+      
+        menu.addEventListener("click", (event) => {
+          if ((event.target as HTMLElement).tagName === "A") {
+            closeMenu();
+          }
+        });
+      </script>
+  </body>
+</html>
+
+<style>
+  .hidden-on-small-br {
+    display: none;
+  }
+
+  /* Using media query to show it only on small screens (below 768px in this example) */
+  @media screen and (max-width: 768px) {
+    .hidden-on-small-br {
+      display: block; /* Or inline, inline-block, flex, etc., depending on your layout needs */
+    }
+  }
+  .margin-box {
+    margin: 20px;
+  }
+  
+</style>
