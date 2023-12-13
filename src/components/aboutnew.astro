@@ -1,0 +1,72 @@
+---
+   import { Picture } from "@astrojs/image/components";
+   import Service1 from "~/assets/conception2.png";
+   import ContentSection from "~/components/ct-section3.astro";
+
+
+   const widths = [450, 800]; // This represents the actual widths of the images
+const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width image when viewport is >= 640px and 450px width image otherwise.
+
+---
+<br>
+<!-- <ContentSection title="À Propos" id="apropos">
+    <Fragment slot="lead" class="">
+        Notre but est de devenir le meilleur allié des entrepreneurs au Québec. 
+        Nous effectuons cela en mettant sur pied l’aspect technologique de votre entreprise 
+        afin d’augmenter votre efficacité en réduisant votre temps nécessaire pour augmenter 
+        votre chiffre d’affaires.<span class="text-primary">avec leurs entreprises</span>{" "}
+      <span class="text-primary"></span> et qui n'ont pas été déçues{" "}
+      <div class="text-primary">
+      </div>
+    </Fragment> -->
+    <br>
+    <section id="about" class="flex scroll-mt-24 flex-col items-center gap-4 space-y-8">
+        <!-- Title Section -->
+        <div class="flex flex-col items-center gap-4">
+            <slot name="eyebrow" />
+            <h2 class="gradient-text text-center font-extrabold tracking-tight text-6xl">
+                À Propos de Nous
+            </h2>
+        </div>
+
+    
+        <!-- Main Content Section -->
+        <div class="flex flex-col md:flex-row justify-center w-full">
+            <!-- Image Column -->
+            <div class="flex-1 jarallax-keep-img">
+                <Picture
+                    class="w-full transition-transform group-hover:rotate-6 group-hover:scale-125 jarallax-img single-image"
+                    src={Service1}
+                    srcset={`${Service1} 100w`}
+                    widths={widths}
+                    sizes={sizes}
+                    loading="eager"
+                    alt="A computer with the logo of L'agence ELR"
+                />
+            </div>
+
+
+            
+            <!-- Text Column -->
+            <div class="flex-1 text-lead mx-6">
+                <div class="hidden-on-big-br">
+                    <br><br><br><br>
+                </div>
+                <p><strong>Notre mission est de transformer radicalement le paysage entrepreneurial du Québec, en devenant le partenaire incontournable 
+                    des entrepreneurs visionnaires. Nous accomplissons cet exploit en révolutionnant l’aspect technologique de votre entreprise.</strong> <br><br> 
+                    Notre approche n'est pas seulement d'augmenter l'efficacité, mais de catalyser votre croissance en réduisant le temps nécessaire pour 
+                    faire grimper en flèche votre chiffre d'affaires. Nous ne sommes pas juste un soutien, nous sommes le moteur de votre succès.</p>
+                    <br>
+                    <div class="flex">
+                        <a href="#contact" 
+                        class="inline-block btn-small text-white bg-red-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-4 py-1 text-center dark:text-white dark:focus:ring-purple-900 btn2">
+                        SE METTRE EN LIGNE
+                     </a>
+                      </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    
+
+

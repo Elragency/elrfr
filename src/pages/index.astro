@@ -9,7 +9,8 @@ import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
 import Testi from "~/components/testimony.astro";
 import Map from "~/components/map2.astro";
-
+import About2 from "~/components/aboutv9.astro";
+import Aboutnew from "~/components/aboutnew.astro";
 import Portfolio from "~/components/portfolio.astro";
 import Splash from "~/components/splash.astro";
 import Card from "~/components/card.astro";
@@ -48,11 +49,6 @@ const description =
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
     <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'> -->
-    
-
-
-
-
 
     <title>Agence ELR | L'Agence Web Spécialisée Dans La Conception Web Pour PME</title>
     <meta name="description" content={description} />
@@ -101,23 +97,15 @@ const description =
   
     <Header />
     <Splash />
-    <!-- <section class="relative h-full fadeIn">
-      <div class="space-y-24 px-8 py-32">
-        <Intro />
-      </div>
-      </section> -->
-      <section class="hidden-on-small-br">
-        <br><br><br>
-      </section>
-      <About />
+      <Aboutnew />
       <!-- <br><br><br> -->
-      <section class="hidden-on-md-br">
-        <br><br><br><br><br> <br><br><br><br><br>
-      </section>
       <section class="hidden-on-small-br">
-        <br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
+        <br><br><br><br>
       </section>
-      <Features />
+      <section>
+        <Features />
+      </section>
+
       <br>
       <Propos />
       <Portfolio />
@@ -226,4 +214,27 @@ const description =
       display: block; /* Or inline, inline-block, flex, etc., depending on your layout needs */
     }
   }
+
+  @media screen and (min-width: 768px) {
+    .hidden-on-big-br {
+      display: block; /* Or inline, inline-block, flex, etc., depending on your layout needs */
+    }
+  }
+
+  #about figure {
+  margin-right: 50px;
+}
+
+#about img.single-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  #about img.single-image {
+    height: auto;
+  }
+}
+
 </style>

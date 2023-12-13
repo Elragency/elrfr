@@ -25,3 +25,4 @@ export const collections1 = {
   'blog': blogCollection
 };
 
+

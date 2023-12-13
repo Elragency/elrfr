@@ -8,6 +8,8 @@ import Header from "~/components/header.astro";
 import Splash from "~/components/port-splash.astro";
 import Websites from "~/components/websites.astro";
 import Portfolio from "~/components/portfolio2.astro";
+import Portfolio3 from "~/components/portfolio3.astro";
+import Map from "~/components/map2.astro";
 
 
 import { getLangFromUrl } from '~/i18n/utils';
@@ -102,11 +104,9 @@ switchInput.addEventListener("input", function () {
 
     <Splash />
       <Portfolio />
-      <section class="hidden-on-small-br">
-        <br><br><br><br><br><br><br><br>
-      </section>
 
-      <!-- <Websites /> -->
+      <Portfolio3 />
+      <Map />
       <Footer2 />
       <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>

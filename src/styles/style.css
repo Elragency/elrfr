@@ -199,3 +199,51 @@ main > div > a:hover {
     width: 85%;
   }
 }
+
+
+/*----- About us Section
+--------------------------------------------------------------*/
+#about2 figure {
+  margin-right: 50px;
+}
+
+#about2 img.single-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  #about2 img.single-image {
+    height: auto;
+  }
+}
+
+
+/*--------------------------------------------------------------
+/** Jarallax
+--------------------------------------------------------------*/
+.jarallax {
+  position: relative;
+  z-index: 0;
+}
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.jarallax-keep-img {
+  position: relative;
+  z-index: 0;
+}
+.jarallax-keep-img > .jarallax-img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    z-index: -100;
+}
