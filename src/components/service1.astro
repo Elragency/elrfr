@@ -1,4 +1,4 @@
-   ---
+---
    import { Picture } from "@astrojs/image/components";
    import Service1 from "~/assets/conception.png";
    import Service2 from "~/assets/service-3.png";
@@ -9,232 +9,236 @@
 
    const widths = [450, 800]; // This represents the actual widths of the images
 const sizes = "(min-width: 640px) 800px, 450px"; // This will select 800px width image when viewport is >= 640px and 450px width image otherwise.
+---
 
-   ---  
-
-      <!-- ====== About Section Start -->
-           <section
-           id="about"
-           >
-           <div class="margin-box px-10">
-             <div class="">
-               <div class="-mx-4 flex flex-wrap">
-                 <div class="w-full px-4">
-                   <div
-                     class="items-center justify-between overflow-hidden border lg:flex"
-                   >
-                     <div
-                       class="w-full py-12 px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 lg:px-16 xl:max-w-[640px] xl:p-[70px]"
-                     >
-                       <span
-                         class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
-                       >
-                         Service Principal
-                       </span>
-                       <h2
-                         class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
-                       >
-                         Conception de site web personnalisé
-                       </h2>
-                       <p class="mb-9 text-base leading-relaxed text-body-color">
-                        Découvrez un site ultra-performant, doté des fonctionnalités clés, sculpté avec les dernières avancées technologiques pour propulser votre présence en ligne.
-                       </p>
-                       <a
-                         href="/services/conception-web"
-                         class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
-                       >
-                       En Savoir Plus
-                       </a>
-                     </div>
-                     <div class="text-center">
-                        <div class="text-center">
-                            <div class="relative z-10 inline-block mt-6">
-                              <Picture
-                  class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                  src={Service1}
-                  srcset={`${Service1} 800w`}
-                  widths={widths}
-                  sizes={sizes}
-                  loading="eager"
-                  alt="Un ordinateur avec logo de L'agence ELR"
-              />
-                            </div>
-                        </div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           </section>
-
-
-      <!-- ====== About Section END -->
-
-
-<!-- ====== About Section Start -->
-<section id="about" class="lg:pt-[120px] lg:pb-[120px]">
-    <div class="margin-box px-10">
-        <div class="">
-            <div class="-mx-4 flex flex-wrap">
-                <div class="w-full px-4">
-                    <div class="items-center justify-between overflow-hidden border lg:flex">
-                        <!-- Move the image section here, before the text content -->
-                        <div class="text-center">
-                            <div class="relative z-10 inline-block mt-6">
-                              <Picture
-                              class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                              src={Service2}
-                              srcset={`${Service2} 800w`}
-                              widths={widths}
-                              sizes={sizes}
-                              loading="eager"
-                              alt="Un ordinateur avec logo de L'agence ELR"
-                          />
-                            </div>
-                        </div>
-
-                        <div
-                            class="w-full py-12 px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 lg:px-16 xl:max-w-[640px] xl:p-[70px]"
-                        >
-                            <span
-                                class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
-                            >
-                                Service #2
-                            </span>
-                            <h2
-                                class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
-                            >
-                            Gestion de client avancée
-                            </h2>
-                            <p class="mb-9 text-base leading-relaxed text-body-color">
-                              Fidélisez en toute simplicité. Que ce soit pour un service ponctuel ou récurrent, notre système rappelle vos clients au moment idéal pour un nouveau rendez-vous ou un renouvellement tout en les valorisant.
-                            </p>
-                            <a
-                         href="/services/crm"
-                         class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
-                       >
-                       En Savoir Plus
-                       </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-      <!-- ====== About Section Start -->
-      <section
-      id="about"
-     
-      >
-      <div class="margin-box px-10">
-        <div class="">
-          <div class="-mx-4 flex flex-wrap">
-            <div class="w-full px-4">
-              <div
-                class="items-center justify-between overflow-hidden border lg:flex"
+<section class="px-4">
+  <section id="about"
+  class="lg:pt-[20px] lg:pb-[20px] px-2"
+  >
+  <div class="margin-box">
+    <div class="">
+      <div class="-mx-1 flex flex-wrap">
+        <div class="w-full px-1">
+          <div
+            class="items-center justify-between overflow-hidden border lg:flex"
+          >
+            <div
+              class="w-full py-12 px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 lg:px-16 xl:max-w-[640px] xl:p-[70px]"
+            >
+              <span
+                class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
               >
-                <div
-                  class="w-full py-12 px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 lg:px-16 xl:max-w-[640px] xl:p-[70px]"
-                >
-                  <span
-                    class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
-                  >
-                    Service #3
-                  </span>
-                  <h2
-                    class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
-                  >
-                  Automatisations des procédés d’affaires
-                  </h2>
-                  <p class="mb-9 text-base leading-relaxed text-body-color">
-                    Nous mettons sur pieds un système complet destiné à automatiser vos procédés sans investir de temps supplémentaires ce qui facilite vos suivis et fait en sorte d’augmenter la satisfaction de vos clients.
-                  </p>
-                  <a
-                    href="#contact"
-                    class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
-                  >
-                    Débutez Aujourd'hui!
-                  </a>
-                </div>
-                <div class="text-center">
-                  <div class="text-center">
-                      <div class="relative z-10 inline-block mt-6">
-                        <Picture
-            class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-            src={Service3}
-            srcset={`${Service3} 800w`}
-            widths={widths}
-            sizes={sizes}
-            loading="eager"
-            alt="Un ordinateur avec logo de L'agence ELR"
-        />
-                      </div>
-                  </div>
+                Service Principal
+              </span>
+              <h2
+                class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
+              >
+                Conception de site web personnalisé
+              </h2>
+              <p class="mb-9 text-base leading-relaxed text-body-color">
+               Découvrez un site ultra-performant, doté des fonctionnalités clés, sculpté avec les dernières avancées technologiques pour propulser votre présence en ligne.
+              </p>
+              <a
+                href="/services/conception-web"
+                class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
+              >
+              En Savoir Plus
+              </a>
+            </div>
+            <div class="text-center">
+               <div class="text-center">
+                   <div class="relative z-10 inline-block mt-6">
+                     <Picture
+         class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+         src={Service1}
+         srcset={`${Service1} 800w`}
+         widths={widths}
+         sizes={sizes}
+         loading="eager"
+         alt="Un ordinateur avec logo de L'agence ELR"
+     />
+                   </div>
                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      </section>
-
-
- <!-- ====== About Section END -->
-
- <!-- ====== About Section Start -->
-<section id="about" class="lg:pt-[120px] lg:pb-[120px]">
-    <div class="margin-box px-10">
-        <div class="">
-            <div class="-mx-4 flex flex-wrap">
-                <div class="w-full px-4">
-                    <div class="items-center justify-between overflow-hidden border lg:flex">
-                        <!-- Move the image section here, before the text content -->
-                        <div class="text-center">
-                            <div class="relative z-10 inline-block mt-6">
-                              <Picture
-                              class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                              src={Service4}
-                              srcset={`${Service4} 800w`}
-                              widths={widths}
-                              sizes={sizes}
-                              loading="eager"
-                              alt="Un ordinateur avec logo de L'agence ELR"
-                          />
-                            </div>
-                        </div>
-
-                        <div
-                            class="w-full py-12 px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 lg:px-16 xl:max-w-[640px] xl:p-[70px]"
-                        >
-                            <span
-                                class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
-                            >
-                            Service #4
-                            </span>
-                            <h2
-                                class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
-                            >
-                            Image de Marque forte
-                            </h2>
-                            <p class="mb-9 text-base leading-relaxed text-body-color">
-                                Que ce soit pour un blog ou les réseaux sociaux, démarquez-vous avec du contenu frais et engageant. Faites-nous confiance pour raconter votre histoire.
-                            </p>
-                            <a
-                                href="#contact"
-                                class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
-                            >
-                                Débutez Aujourd'hui!
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+  </div>
+  </section>
+
+
+<!-- ====== About Section END -->
+
+
+<!-- ====== About Section Start -->
+<section id="about"
+class="lg:pt-[20px] lg:pb-[20px] px-2"
+>
+<div class="margin-box">
+<div class="">
+<div class="-mx-1 flex flex-wrap">
+<div class="w-full px-1">
+           <div class="items-center justify-between overflow-hidden border lg:flex">
+               <!-- Move the image section here, before the text content -->
+               <div class="text-center">
+                   <div class="relative z-10 inline-block mt-6">
+                     <Picture
+                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+                     src={Service2}
+                     srcset={`${Service2} 800w`}
+                     widths={widths}
+                     sizes={sizes}
+                     loading="eager"
+                     alt="Un ordinateur avec logo de L'agence ELR"
+                 />
+                   </div>
+               </div>
+
+               <div
+                   class="w-full py-12 px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 lg:px-16 xl:max-w-[640px] xl:p-[70px]"
+               >
+                   <span
+                       class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
+                   >
+                       Service #2
+                   </span>
+                   <h2
+                       class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
+                   >
+                   Gestion de client avancée
+                   </h2>
+                   <p class="mb-9 text-base leading-relaxed text-body-color">
+                     Fidélisez en toute simplicité. Que ce soit pour un service ponctuel ou récurrent, notre système rappelle vos clients au moment idéal pour un nouveau rendez-vous ou un renouvellement tout en les valorisant.
+                   </p>
+                   <a
+                href="/services/crm"
+                class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
+              >
+              En Savoir Plus
+              </a>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
 </section>
+
+<!-- ====== About Section Start -->
+<section id="about"
+class="lg:pt-[20px] lg:pb-[20px] px-2"
+>
+<div class="margin-box">
+<div class="">
+ <div class="-mx-1 flex flex-wrap">
+   <div class="w-full px-1">
+     <div
+       class="items-center justify-between overflow-hidden border lg:flex"
+     >
+       <div
+         class="w-full py-12 px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 lg:px-16 xl:max-w-[640px] xl:p-[70px]"
+       >
+         <span
+           class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
+         >
+           Service #3
+         </span>
+         <h2
+           class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
+         >
+         Automatisations des procédés d’affaires
+         </h2>
+         <p class="mb-9 text-base leading-relaxed text-body-color">
+           Nous mettons sur pieds un système complet destiné à automatiser vos procédés sans investir de temps supplémentaires ce qui facilite vos suivis et fait en sorte d’augmenter la satisfaction de vos clients.
+         </p>
+         <a
+           href="#contact"
+           class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
+         >
+           Débutez Aujourd'hui!
+         </a>
+       </div>
+       <div class="text-center">
+         <div class="text-center">
+             <div class="relative z-10 inline-block mt-6">
+               <Picture
+   class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+   src={Service3}
+   srcset={`${Service3} 800w`}
+   widths={widths}
+   sizes={sizes}
+   loading="eager"
+   alt="Un ordinateur avec logo de L'agence ELR"
+/>
+             </div>
+         </div>
+      </div>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</section>
+
+
+<!-- ====== About Section END -->
+
+<!-- ====== About Section Start -->
+<section id="about"
+class="lg:pt-[20px] lg:pb-[20px] px-2"
+>
+<div class="margin-box">
+<div class="">
+<div class="-mx-1 flex flex-wrap">
+<div class="w-full px-1">
+           <div class="items-center justify-between overflow-hidden border lg:flex">
+               <!-- Move the image section here, before the text content -->
+               <div class="text-center">
+                   <div class="relative z-10 inline-block mt-6">
+                     <Picture
+                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+                     src={Service4}
+                     srcset={`${Service4} 800w`}
+                     widths={widths}
+                     sizes={sizes}
+                     loading="eager"
+                     alt="Un ordinateur avec logo de L'agence ELR"
+                 />
+                   </div>
+               </div>
+
+               <div
+                   class="w-full py-12 px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 lg:px-16 xl:max-w-[640px] xl:p-[70px]"
+               >
+                   <span
+                       class="mb-5 inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
+                   >
+                   Service #4
+                   </span>
+                   <h2
+                       class="mb-6 text-3xl font-bold gradient-text sm:text-4xl sm:leading-snug 2xl:text-[40px]"
+                   >
+                   Image de Marque forte
+                   </h2>
+                   <p class="mb-9 text-base leading-relaxed text-body-color">
+                       Que ce soit pour un blog ou les réseaux sociaux, démarquez-vous avec du contenu frais et engageant. Faites-nous confiance pour raconter votre histoire.
+                   </p>
+                   <a
+                       href="#contact"
+                       class="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
+                   >
+                       Débutez Aujourd'hui!
+                   </a>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+</section>
+</section>
+
 
 
 <style>
