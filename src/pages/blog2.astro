@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '~/layouts/BaseLayout.astro';
+
+import ContactCTA from '~/layouts/components-blog/ContactCTA.astro';
+import PortfolioPreview from '~/layouts/components-blog/PortfolioPreview.astro';
+import Hero from '~/layouts/components-blog/Hero.astro';
+import Grid from '~/layouts/components-blog/Grid.astro';
+
+const projects = (await getCollection('blog')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+	title="Nos Ressources | Xclusivity."
+	description="Consulter nos publications gratuites qui vous permettrons de faire grandir votre compte onlyfans."
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Notre Travail"
+				tagline="Est de nous assurer que chaque créatrice de contenu sous notre gestion soit en mesure d'atteindre ses objectifs et vivre confortablement de son contenu. Cela ne devrait pas être une possibilité, mais bien une certitude."
+				align="start"
+			/>
+			<Grid variant="offset">
+				{
+					projects.map((project) => (
+						<li>
+							<PortfolioPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>

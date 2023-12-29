@@ -1,0 +1,91 @@
+---
+import { getCollection } from 'astro:content';
+import PortfolioPreview from '~/layouts/components-blog/PortfolioPreview.astro';
+import Grid from '~/layouts/components-blog/Grid.astro';
+
+import Header from "~/components/header.astro";
+import Splash from "~/components/splash.astro";
+
+import { getLangFromUrl } from '~/i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+
+import "~/styles/index.css";
+// import "~/styles/animate.css";
+
+
+
+const projects = (await getCollection('blog')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+<!doctype html>
+<html lang={lang} class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TPW94QBF');</script>
+  <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+
+    <title>Agence ELR | L'Agence Web Spécialisée Dans La Conception Web Pour PME</title>
+
+
+    <!-- social media -->
+    <meta property="og:title" content="Agence ELR" />
+    <meta property="og:type" content="L'agence web pour les PMEs" />
+
+
+       <!-- initialize theme -->
+   <script is:inline>
+    const themeSaved = localStorage.getItem("theme");
+
+    if (themeSaved) {
+      document.documentElement.dataset.theme = themeSaved;
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+    }
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        if (!localStorage.getItem("theme")) {
+          document.documentElement.dataset.theme = event.matches
+            ? "dark"
+            : "light";
+        }
+      });
+  </script>
+
+  
+
+<script  src="~/assets/js/burger.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+
+</head>
+  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
+	<Header />
+<Splash />
+<Grid variant="offset">
+	{
+		projects.map((project) => (
+			<li>
+				<PortfolioPreview project={project} />
+			</li>
+		))
+	}
+</Grid>
+  </body>
+
+

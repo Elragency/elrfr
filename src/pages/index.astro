@@ -2,22 +2,23 @@
 // import "@fontsource-variable/inter";
 // import "~/assets/js/script3";
 
-import Propos from "~/components/propos.astro";
-import Features from "~/components/features.astro";
-import Footer2 from "~/components/footer4.astro";
 import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
+import Splash from "~/components/splash.astro";
+import Aboutnew from "~/components/aboutnew.astro";
+import Features from "~/components/features.astro";
+import Portfolio from "~/components/portfolio.astro";
 import Testi from "~/components/testimony.astro";
 import Map from "~/components/map2.astro";
-import About2 from "~/components/aboutv9.astro";
-import Aboutnew from "~/components/aboutnew.astro";
-import Portfolio from "~/components/portfolio.astro";
-import Splash from "~/components/splash.astro";
-import Card from "~/components/card.astro";
-import Pricing from "~/components/Pricing.astro";
-import About from "~/components/about2.astro";
-import Banner from "~/components/banner.astro";
-import App from "~/components/app.astro";
+import Footer2 from "~/components/footer4.astro";
+
+// import Propos from "~/components/propos.astro";
+// import Intro from "~/components/intro.astro";
+// import About2 from "~/components/aboutv9.astro";
+// import Card from "~/components/card.astro";
+// import Pricing from "~/components/Pricing.astro";
+// import About from "~/components/about2.astro";
+// import Banner from "~/components/banner.astro";
+// import App from "~/components/app.astro";
 
 
 
@@ -123,73 +124,8 @@ const description =
          
         </style>
       </noscript>
-      <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script> -->
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
-      <!-- <script>
-        const tableWrapper = document.querySelector(".table-wrapper");
-        const switchInputs = document.querySelectorAll(".switch-wrapper input");
-        const prices = tableWrapper.querySelectorAll(".price");
-        const toggleClass = "hide";
 
-        for (const switchInput of switchInputs) {
-          switchInput.addEventListener("input", function () {
-            for (const price of prices) {
-              price.classList.add(toggleClass);
-            }
-            const activePrices = tableWrapper.querySelectorAll(
-            `.price.${switchInput.id}`
-            );
-            for (const activePrice of activePrices) {
-              activePrice.classList.remove(toggleClass);
-            }
-          });
-        }
-      </script> -->
-      <!-- <script>
-        import MicroModal from "micromodal";
-        import invariant from "tiny-invariant";
-      
-        const menuModalId = "menu-modal";
-      
-        const header = document.querySelector("#page-header") as HTMLElement;
-        const page = document.documentElement;
-        const menu = document.querySelector(`#${menuModalId} ul`);
-        const openNavButton = document.querySelector("#open-nav-button");
-        const closeNavButton = document.querySelector("#close-nav-button");
-      
-        invariant(header, "header should not be null");
-        invariant(menu, "menu should not be null");
-        invariant(openNavButton, "openNavButton should not be null");
-        invariant(closeNavButton, "closeNavButton should not be null");
-      
-        const openMenu = () => {
-          MicroModal.show(menuModalId, { disableScroll: true });
-        };
-      
-        const closeMenu = () => {
-          MicroModal.close(menuModalId);
-        };
-      
-        openNavButton.addEventListener("click", openMenu);
-        closeNavButton.addEventListener("click", closeMenu);
-      
-        document.addEventListener("scroll", () => {
-          const d = page.clientHeight - page.scrollTop - header.offsetHeight;
-          header.classList.toggle("fixed-header", d < 0);
-        });
-      
-        menu.addEventListener("click", (event) => {
-          if ((event.target as HTMLElement).tagName === "A") {
-            closeMenu();
-          }
-        });
-      </script> -->
-
-
-
-      
-      
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>     
   </body>
 
 </html>
